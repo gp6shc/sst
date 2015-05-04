@@ -1,0 +1,7 @@
+@import 'wp-style'; // Theme info; Adds style to all WordPress specific classes
+@import 'normalize'; // Get all browsers on the same page
+
+@import 'variables'; // Set all global variables
+
+@import 'global'; // The primary chunk of style
+@import 'home'; // Home page specific styles

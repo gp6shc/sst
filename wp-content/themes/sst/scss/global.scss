@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body {
+	font-size: 100%; // Match the defualt font size
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $header-font;
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 0.7rem 0;	
+}
+
+h2 {
+	font-size: 2.2rem;
+	margin: 0.4rem 0;	
+	
+}
+
+h3 {
+	font-size: 1.8rem;
+	margin: 0.3rem 0;	
+	
+}
+
+h4 {
+	font-size: 1.3rem;
+	margin: 0.2rem 0;	
+	
+}
+
+h5 {
+	font-size: 1rem;
+	margin: 0.1rem 0;	
+	
+}
+
+h6 {
+	font-size: 1rem;
+	margin: 0.1rem 0;	
+	
+}
+
+a {
+	color: $secondary;
+	text-decoration: none;
+	
+	&:visited {
+		color: $secondary;
+	}
+	
+	&:hover {
+		color: lighten($secondary, 20%);
+	}
+	
+}
