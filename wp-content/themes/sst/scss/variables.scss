@@ -1,8 +1,17 @@
 // Fonts
-$header-font: sans-serif;
-$body-font: serif;
+$font: 'Gotham', sans-serif;
+$font-nav: 'GothamHTF', sans-serif;
+$font-brush: 'BrushUp', sans-serif;
 
 // Brand Colors
-$primary: #adf345;
-$secondary: #da5972;
-$tertiary: #121212;
+$blue: #00A7D0;
+$purple: #501B73;
+$white: #E4E4E4; 	//footer background
+
+// Font Colors
+$font-grey: #4D4D4D;
+
+// Misc
+$transSmall:  240ms;
+$transMedium: 350ms;
+$transLarge:  500ms;

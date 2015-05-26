@@ -1,0 +1,71 @@
+//GothamHTF
+@font-face {
+	font-family: "GothamHTF";
+	src: url("font/GothamHTF.eot");
+	src: url("font/GothamHTF.eot#iefix") format("embedded-opentype"),
+		url("font/GothamHTF.woff") format("woff"),
+		url("font/GothamHTF.ttf") format("truetype"),
+		url("font/GothamHTF.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+//Gotham Book
+@font-face {
+	font-family: "Gotham";
+	src: url("font/Gotham-Book.eot");
+	src: url("font/Gotham-Book.eot#iefix") format("embedded-opentype"),
+		url("font/Gotham-Book.woff") format("woff"),
+		url("font/Gotham-Book.ttf") format("truetype"),
+		url("font/Gotham-Book.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+//BrushUp
+@font-face {
+	font-family: "BrushUp";
+	src: url("font/BrushUp.eot");
+	src: url("font/BrushUp.eot#iefix") format("embedded-opentype"),
+		url("font/BrushUp.woff") format("woff"),
+		url("font/BrushUp.ttf") format("truetype"),
+		url("font/BrushUp.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+//Gotham Light
+@font-face {
+	font-family: "Gotham";
+	src: url("font/Gotham-Light.eot");
+	src: url("font/Gotham-Light.eot#iefix") format("embedded-opentype"),
+		url("font/Gotham-Light.woff") format("woff"),
+		url("font/Gotham-Light.ttf") format("truetype"),
+		url("font/Gotham-Light.svg") format("svg");
+	font-weight: 100;
+	font-style: normal;
+}
+
+//Gotham Book Italic
+@font-face {
+	font-family: "Gotham";
+	src: url("font/Gotham-BookItalic.eot");
+	src: url("font/Gotham-BookItalic.eot#iefix") format("embedded-opentype"),
+		url("font/Gotham-BookItalic.woff") format("woff"),
+		url("font/Gotham-BookItalic.ttf") format("truetype"),
+		url("font/Gotham-BookItalic.svg") format("svg");
+	font-weight: 400;
+	font-style: italic;
+}
+
+//Gotham Bold
+@font-face {
+	font-family: "Gotham";
+	src: url("font/Gotham-Bold.eot");
+	src: url("font/Gotham-Bold.eot#iefix") format("embedded-opentype"),
+		url("font/Gotham-Bold.woff") format("woff"),
+		url("font/Gotham-Bold.ttf") format("truetype"),
+		url("font/Gotham-Bold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
