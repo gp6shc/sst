@@ -75,12 +75,3 @@ function spike_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'spike_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
-function spike_scripts() {
-	wp_enqueue_style( 'sst-style', get_stylesheet_uri() );
-}
-add_action( 'wp_enqueue_scripts', 'spike_scripts' );
-

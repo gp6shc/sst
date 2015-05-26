@@ -1,8 +1,13 @@
-@import 'wp-style'; // Theme info; Adds style to all WordPress specific classes
-@import 'normalize'; // Get all browsers on the same page
 @import 'font'; 		// Kick off font downloads
 
-@import 'variables'; // Set all global variables
+@import 'variables'; 	// Set all global variables
 
-@import 'global'; // The primary chunk of style
-@import 'home'; // Home page specific styles
+@import 'normalize'; 	// Get all browsers on the same page
+@import 'wp-style'; 	// Theme info; Adds style to all WordPress specific classes
+
+@import 'global'; 		// The primary chunk of style
+@import 'nav'; 			// Navigation style
+
+@import 'home'; 		// Home page specific styles
+
+@import 'footer'; 		// footer styles

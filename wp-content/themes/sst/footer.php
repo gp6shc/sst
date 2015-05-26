@@ -10,11 +10,17 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-		</div><!-- .site-info -->
+	<footer class="site-footer" role="contentinfo">
+		<section class="resources">
+	
+		</section>
+		<section class="twitter">
+	
+		</section>
+		<section class="site-info">
+	
+		</section>
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

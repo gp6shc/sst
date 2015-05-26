@@ -1,6 +1,16 @@
 /*--------------------------------------------------------------
 Elements
 --------------------------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	min-width: 320px;
+}
+
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -36,8 +46,8 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto;
+	max-width: 100%;
 }
 
 figure {
@@ -58,39 +68,49 @@ Typography
 --------------------------------------------------------------*/
 
 body {
-	font-size: 100%; // Match the defualt font size
+	font-family: $font;
+	font-size: 100%; // Match the defualt font size; 1em = 16px
+	font-weight: 400;
+	font-variant: normal;
+	line-height: 1.8;
+	color: $font-grey;
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: $header-font;
+	font-family: $font;
+	font-weight: 100;
+	line-height: 1;
+	text-transform: uppercase; 
 }
 
 h1 {
 	font-size: 3rem;
+	font-weight: 100;
+	color: $blue;
 	margin: 0.7rem 0;	
 }
 
 h2 {
-	font-size: 2.2rem;
+	font-size: 2.5rem;
 	margin: 0.4rem 0;	
 	
 }
 
 h3 {
-	font-size: 1.8rem;
+	font-size: 2.1rem;
 	margin: 0.3rem 0;	
 	
 }
 
 h4 {
-	font-size: 1.3rem;
+	font-size: 1.7rem;
 	margin: 0.2rem 0;	
 	
 }
 
 h5 {
-	font-size: 1rem;
-	margin: 0.1rem 0;	
+	font-size: 1.3rem;
+	margin: 0.1rem 0;
 	
 }
 
@@ -100,16 +120,191 @@ h6 {
 	
 }
 
+.brush {
+	font-family: $font-brush;
+	letter-spacing: 0.125rem;
+	font-size: 3.8em;
+	line-height: 1;
+	text-rendering: geometricPrecision;
+}
+
 a {
-	color: $secondary;
+	color: $purple;
 	text-decoration: none;
+	transition: color $transSmall;
+	
+	&::after {
+		content: '';
+		display: block;
+		background-color: $purple;
+		height: 3px;
+		transform: rotateY(90deg);
+		transition: transform $transSmall;
+	}
 	
 	&:visited {
-		color: $secondary;
+		color: $purple;
+	}
+	
+	&:hover, &:focus {
+		color: $blue;
+		outline: none;
+		
+		&::after {
+			transform: rotateY(0);
+			
+		}
+	}
+}
+
+p {
+	margin: 0;
+	
+	+ p, + .btn, + .btn-double {
+		margin-top: 1.5em;
+		
+	}
+}
+
+.text-centered {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+Buttons 
+--------------------------------------------------------------*/
+.btn {
+	display: inline-block;
+	position: relative;
+	padding: 0.725em 1.25em 0.35em;
+	border-bottom: 3px solid $purple;
+	color: white;
+	line-height: 1;
+	font-size: 1.125em;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: $purple;	
+	filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+	transition: border-color $transSmall;
+	
+	&:visited {
+		color: white;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(13px);
+		width: 0;
+		height: 0;
+		background: none;
+		border-top: 10px solid $purple;
+		border-left: 10px solid transparent;
+		transition: border-color $transSmall;
 	}
 	
 	&:hover {
-		color: lighten($secondary, 20%);
+		color: white;
+		border-bottom-color: $white;
+		
+		&::after {
+			transform: translateY(13px);
+			border-top-color: $white;
+		}
+	}
+}
+
+.btn-blue {
+	background-color: $blue;
+	border-bottom-color: $blue;
+	
+	&::after {
+		border-top-color: $blue;
+	}
+}
+
+.btn-double {
+	display: inline-block;
+	position: relative;
+	padding: 0.425em 1.25em;
+	background-color: $purple;	
+	box-shadow: 2px 2px 0 $blue;
+	color: white;
+	font-size: 1.125em;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: box-shadow $transMedium;
+	
+	&:visited {
+		color: white;
 	}
 	
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translate(2px, 12px);
+		width: 0;
+		height: 0;
+		border-top: 10px solid $blue;
+		border-left: 10px solid transparent;
+		transition: transform 300ms;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(10px);
+		width: 0;
+		height: 0;
+		background: none;
+		border-top: 10px solid $purple;
+		border-left: 10px solid transparent;
+	}
+	
+	&:hover, &:focus {
+		color: white;
+		box-shadow: 5px 5px 0 $blue;
+		
+		&::before {
+			transition: transform 450ms;
+			transform: translate(5px, 15px)
+		}
+		
+		&::after {
+			transform: translateY(10px);
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+Miscellaneous
+--------------------------------------------------------------*/
+.constrain {
+	position: relative;
+	max-width: 1200px;
+	height: 100%;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin: auto;
+}
+
+.grunge {
+	background-image: url('img/grunge.jpg');
+}
+
+.change-collage {
+	background-image: url('img/change.jpg');
+}
+
+.cf::after {
+	content: '';
+	display: table;
+	clear: both;
 }

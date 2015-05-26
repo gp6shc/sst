@@ -1,0 +1,247 @@
+.hero {
+	background-image: url('img/hero.jpg');
+	background-size: cover;
+	background-position: center center;
+	height: 90vh;
+	min-height: 350px;
+}
+
+.caption {
+	position: absolute;
+	z-index: 0;
+	width: 560px;
+	padding: 30px 40px 20px;
+	bottom: 70px;
+	right: 25px;
+	color: white;
+
+	&::before {
+		content: '';
+		display: block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0; left:0;
+		z-index: -1;
+		background-color: rgba(saturate($purple, 15%), 0.75);
+		filter: brightness(70%) contrast(116%) saturate(122%);
+	}
+	
+	h1 {
+		margin: 0 0 0.2em;
+		color: white;
+		line-height: 1;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		transform: translate(2% ,99.7%);
+		border-top: 30px solid rgba($purple, 0.75);
+		border-left: 30px solid transparent;
+		filter: brightness(70%) contrast(116%) saturate(122%);
+	}
+}
+
+.welcome {
+	padding: 2.5em;
+	
+	p {
+		font-size: 1.25em;
+	}
+}
+
+// !The Grid...
+$grid-height: 320px;
+$grid-gutter: 14px;
+
+.grid {
+	padding: 0;
+	height: $grid-height * 3;
+	text-align: center;
+	color: white;
+	
+	> div {
+		height: 320px;
+		max-height: 320px;
+		position: absolute;
+		margin: $grid-gutter / 2;
+	}
+	
+	.btn {
+		filter: drop-shadow(3px 3px 2px rgba(black, 0.6));
+	}
+}
+
+.middle {
+	top: 0;
+	right: 50%;
+	width: 50vw;
+}
+
+.high {
+	top: 0;
+	left: 50%;
+	width: 50vw;
+}
+
+.stat {
+	top: $grid-height + $grid-gutter;
+	right: 65%;
+	width: calc((50vw - 50%) + 35%);
+	
+	> div {
+		margin: 0 1em;
+	}
+}
+
+.lauren {
+	top: $grid-height + $grid-gutter;
+	left: 35%;
+	width: calc((50vw - 50%) + 65%);
+}
+
+.about {
+	top: $grid-height * 2 + $grid-gutter * 2;
+	right: 35%;
+	width: calc((50vw - 50%) + 65%);
+	
+	div {
+		max-width: 800px;
+	}
+}
+
+.order {
+	top: $grid-height * 2 + $grid-gutter * 2;
+	left: 65%;
+	width: calc((50vw - 50%) + 35%);
+	
+	div {
+		width: 350px;
+		padding: 2em;
+	}
+	
+	h5 {
+		font-size: 3em;
+		margin-bottom: 0.4em;
+	}
+}
+
+.grid-content {
+	padding: 2em 5em;
+	overflow: hidden;
+	
+	h2 {
+		margin: 0.3em 0 0.5em;
+	}
+	
+	h2.brush {
+		margin: 0 0 0.3em;
+	}
+	
+	p {
+		font-size: 1.125em;
+	}
+}
+
+.contain-25, .contain-50, .contain-75 {
+	width: 100%;
+	margin: auto;
+}
+
+.contain-left {
+	float: left;
+}
+
+.contain-right {
+	float: right;	
+}
+
+// !95% Stat
+
+.ninety-five {
+	font-size: 2.55em;
+	color: $blue;
+	margin-top: 0.1em;
+}
+
+.stat-small {
+	text-align: justify;
+	font-size: 0.3em;
+	padding: 0 2.6em;
+	line-height: 1.2;
+	
+	span {
+		font-size: 1.17em;
+	}
+}
+
+.stat-large {
+	color: $blue;
+	font-size: 0.6em;
+	
+	span {
+		color: white;
+	}
+}
+
+.stat-awareness {
+	font-size: 0.65em;
+}
+
+// !About Lauren
+.fifty {
+	max-width: 309px;
+	float: left;
+}
+
+.lauren-img {
+	margin: -2em 0;
+}
+
+// !About Lauren's Kids
+.butterfly {
+	position: relative;
+	margin-top: 25px;		
+
+	&:after {
+		content: "";
+		width: 22px;
+		height: 22px;
+		background-image: url('img/butterfly_animation_white.png');
+		background-position: 0 0;
+		position: absolute;
+		top: -16px;
+		margin-left: -6px;
+		animation: flutterby 8s 4s steps(5) infinite;
+	}
+}
+
+@keyframes flutterby {
+	0%	 {background-position: 0	 }
+	5%	 {background-position: -115px}
+	100% {background-position: -115px}
+}
+
+@media (min-width: 1200px) {
+	.contain-25 {
+		width: 300px;
+	}
+	.contain-50 {
+		width: 600px;
+	}
+	.contain-75 {
+		width: 900px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.hero {
+		height: 0;
+		padding-bottom: 66.667%;		
+	}
+}
