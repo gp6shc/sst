@@ -11,15 +11,23 @@
 	</div><!-- #content -->
 
 	<footer class="site-footer" role="contentinfo">
-		<section class="resources">
-	
-		</section>
-		<section class="twitter">
-	
-		</section>
-		<section class="site-info">
-	
-		</section>
+		<div class="constrain footer-wrap">
+			<section class="resources">
+				<?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
+					<?php dynamic_sidebar( 'footer_1' ); ?>
+				<?php endif; ?>
+			</section>
+			<section class="twitter">
+				<?php if ( is_active_sidebar( 'footer_2' ) ) : ?>
+					<?php dynamic_sidebar( 'footer_2' ); ?>
+				<?php endif; ?>
+			</section>
+			<section class="site-info">
+				<?php if ( is_active_sidebar( 'footer_3' ) ) : ?>
+					<?php dynamic_sidebar( 'footer_3' ); ?>
+				<?php endif; ?>
+			</section>
+		</div>
 	</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>

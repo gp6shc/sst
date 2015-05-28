@@ -5,7 +5,6 @@
  * @package Spike
  */
 
-if ( ! function_exists( 'spike_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -55,23 +54,58 @@ function spike_setup() {
 	}
 	add_action( 'init', 'disable_emojis' );
 }
-endif; // spike_setup
 add_action( 'after_setup_theme', 'spike_setup' );
 
+
 /**
- * Register widget area.
+ * Deregister plugin scripts and styles.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function spike_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'spike' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
+
+function spike_remove_scripts() {
+    wp_dequeue_style( 'tp_twitter_plugin_css' );
+    wp_deregister_style( 'tp_twitter_plugin_css' );
 }
-add_action( 'widgets_init', 'spike_widgets_init' );
+add_action( 'wp_enqueue_scripts', 'spike_remove_scripts', 20 );
+
+/**
+ * Register widgetized areas.
+ *
+ */
+function footer_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Left',
+		'id'            => 'footer_1',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Center',
+		'id'            => 'footer_2',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Right',
+		'id'            => 'footer_3',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'footer_widgets_init' );
+
+// Get the home url for shortcode use
+function home_url_shortcode() {
+	return get_home_url();
+} 
+add_shortcode('home-url','home_url_shortcode');
