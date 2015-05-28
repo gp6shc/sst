@@ -5119,7 +5119,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/butterfly_animation_white.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-content\/themes\/sst\/img\/change.jpg": {
 		"fileType": 16384,
@@ -5130,7 +5130,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/change.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-content\/themes\/sst\/img\/grunge.jpg": {
 		"fileType": 16384,
@@ -5139,17 +5139,6 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/grunge.jpg",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/grunge.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/wp-content\/themes\/sst\/img\/hero.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.29921e+07,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/hero.jpg",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/hero.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
@@ -5163,7 +5152,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/lauren.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-content\/themes\/sst\/img\/sst-logo.png": {
 		"fileType": 32768,
@@ -5174,7 +5163,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/sst-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-content\/themes\/sst\/index.php": {
 		"fileType": 8192,
@@ -5733,7 +5722,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/05\/hero-1024x683.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-content\/uploads\/2015\/05\/hero-150x150.jpg": {
 		"fileType": 16384,
@@ -5744,7 +5733,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/05\/hero-150x150.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-content\/uploads\/2015\/05\/hero-300x200.jpg": {
 		"fileType": 16384,
@@ -5755,7 +5744,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/05\/hero-300x200.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-content\/uploads\/2015\/05\/hero.jpg": {
 		"fileType": 16384,
@@ -5766,7 +5755,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/05\/hero.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/wp-cron.php": {
 		"fileType": 8192,
