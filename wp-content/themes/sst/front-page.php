@@ -6,12 +6,18 @@
  */
 
 get_header(); ?>
+<?php
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+	$thumb_url = $thumb_url_array[0];
+	
+	$fields = get_fields();
+?>
 
-<div class="hero">
+<div class="hero" style="background-image: url('<?= $thumb_url; ?>')">
 	<div class="constrain">
 		<div class="caption">
-			<h1 class="brush">This is a Headline</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+			<?= $fields['photo_caption']; ?>
 		</div>
 	</div>
 </div>
@@ -19,58 +25,39 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 	<div class="constrain">
 		<section class="welcome text-centered">
-			<h1>This is a Welcome Message</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt rutrum varius. Suspendisse sit amet est viverra, ultrices velit ac, porta enim. To prevent sexual abuse through awareness and education, and to help survivors heal with guidance and support.</p>
-			<a href="/about" class="btn-double">Learn More</a>
+			<?= $fields['welcome_message']; ?>
 		</section>
 	</div>
 	
-	<section class="grid constrain">
+	<section class="grid">
 		<div class="middle grunge">
 			<div class="grid-content contain-50 contain-right">
-				<h2 class="brush">Middle School</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a href="/middle-school" class="btn btn-purple">Learn More</a>
+				<?= $fields['middle_school']; ?>
 			</div>
 		</div>
 		<div class="high change-collage">
 			<div class="grid-content contain-50 contain-left">
-				<h2 class="brush">High School</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a href="/middle-school" class="btn btn-blue">Learn More</a>
+				<?= $fields['high_school']; ?>
 			</div>
 		</div>
 		<div class="stat change-collage">
 			<div class="contain-25 contain-right brush">
-				<div class="ninety-five">95%</div>
-				<div class="stat-small"><span>of sexual abuse is</span> preventable through</div>
-				<div class="stat-large">education <span>&</span></div>
-				<div class="stat-large stat-awareness">awareness</div>
+				<?= $fields['stat']; ?>
 			</div>
 		</div>
 		<div class="lauren grunge">
 			<div class="grid-content contain-75 contain-left cf">
-				<div class="fifty">
-					<h2>Meet Lauren</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					<a class="btn btn-purple" href="#">Learn More</a>
-				</div>
-				<div class="fifty">
-					<img class="lauren-img" src="<?= get_template_directory_uri()?>/img/lauren.png"/>
-				</div>
+				<?= $fields['lauren']; ?>
 			</div>
 		</div>
 		<div class="about grunge">
 			<div class="grid-content contain-75 contain-right">
-				<h2 class="butterfly">About Lauren's Kids</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<?= $fields['about']; ?>
 			</div>
 		</div>
 		<div class="order change-collage">
 			<div class="grid-content contain-25 contain-left">
-				<h5 class="brush">Order Now</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-				<a class="btn btn-blue" href="#">Order Now</a>
+				<?= $fields['order']; ?>
 			</div>
 		</div>
 	</section>

@@ -1,5 +1,4 @@
 .hero {
-	background-image: url('img/hero.jpg');
 	background-size: cover;
 	background-position: center center;
 	height: 90vh;
@@ -60,8 +59,10 @@ $grid-height: 320px;
 $grid-gutter: 14px;
 
 .grid {
+	position: relative;
+	overflow: hidden;
 	padding: 0;
-	height: $grid-height * 3;
+	height: $grid-height * 3 + $grid-gutter * 3;
 	text-align: center;
 	color: white;
 	
