@@ -550,7 +550,12 @@ Elements
 
 body {
   position: relative;
-  min-width: 320px; }
+  min-width: 320px;
+  background-color: #501B73; }
+
+.white-bg {
+  background-color: white;
+  overflow: hidden; }
 
 hr {
   background-color: #ccc;
@@ -673,6 +678,14 @@ a {
       -webkit-transform: rotateY(0);
               transform: rotateY(0); }
 
+.no-hover-line::after {
+  display: none; }
+
+.no-hover-line:focus::after {
+  display: block;
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0); }
+
 p {
   margin: 0; }
   p + p, p + .btn, p + .btn-double {
@@ -695,8 +708,7 @@ Buttons
   font-weight: 700;
   text-transform: uppercase;
   background-color: #501B73;
-  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
   -webkit-transition: border-color 240ms;
           transition: border-color 240ms; }
   .btn:visited {
@@ -716,10 +728,10 @@ Buttons
     border-left: 10px solid transparent;
     -webkit-transition: border-color 240ms;
             transition: border-color 240ms; }
-  .btn:hover {
+  .btn:hover, .btn:focus {
     color: white;
     border-bottom-color: #E4E4E4; }
-    .btn:hover::after {
+    .btn:hover::after, .btn:focus::after {
       -webkit-transform: translateY(13px);
           -ms-transform: translateY(13px);
               transform: translateY(13px);
@@ -813,8 +825,13 @@ Miscellaneous
   z-index: 10000;
   width: 100%;
   height: 88px;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 32px -5px rgba(0, 0, 0, 0.2); }
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 32px -5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 500ms;
+          transition: background-color 500ms; }
+
+.whiter {
+  background-color: rgba(255, 255, 255, 0.94); }
 
 .nav-wrapper {
   display: -webkit-box;
@@ -835,12 +852,6 @@ Miscellaneous
   display: inline-block;
   margin-top: 6px;
   width: 248px; }
-  .site-branding a::after {
-    display: none; }
-  .site-branding a:focus::after {
-    display: block;
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0); }
 
 .main-navigation {
   display: inline-block; }
@@ -932,8 +943,6 @@ Miscellaneous
     font-size: 1.25em; }
 
 .grid {
-  position: relative;
-  overflow: hidden;
   padding: 0;
   height: 1002px;
   text-align: center;
@@ -944,8 +953,7 @@ Miscellaneous
     position: absolute;
     margin: 7px; }
   .grid .btn {
-    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.6));
-            filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.6)); }
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6); }
 
 .middle {
   top: 0;
@@ -1107,7 +1115,8 @@ Miscellaneous
 
 .tp_recent_tweets {
   background-color: #cbcbcb;
-  padding: 1em 0.8em; }
+  padding: 1em 1em 1em 0.8em;
+  font-size: 0.9em; }
   .tp_recent_tweets li {
     padding-left: 2em;
     position: relative; }
@@ -1143,24 +1152,24 @@ Miscellaneous
   line-height: 1.5;
   font-style: italic; }
 
-.refs img {
+.lk-logo {
   width: 50%;
   margin-right: 15px; }
 
 .icn {
   display: inline-block;
-  background-color: #00A7D0;
   width: 2.2em;
   height: 2.2em;
   border-radius: 50%;
+  background-color: #00A7D0;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  -webkit-transition: background 350ms;
-          transition: background 350ms; }
+  -webkit-transition: background-color 350ms;
+          transition: background-color 350ms; }
   .icn::after {
     display: none; }
-  .icn:hover {
+  .icn:hover, .icn:focus {
     background-color: #501B73; }
 
 .icn-twitter {
@@ -1175,4 +1184,17 @@ Miscellaneous
 .icn-youtube {
   background-image: url("img/youtube.svg");
   background-size: 65%; }
+
+.no-svg .tp_recent_tweets li::before {
+  background-image: url("img/twitter.png");
+  background-size: contain; }
+
+.no-svg .icn-twitter {
+  background-image: url("img/twitter.png"); }
+
+.no-svg .icn-facebook {
+  background-image: url("img/facebook.png"); }
+
+.no-svg .icn-youtube {
+  background-image: url("img/youtube.png"); }
 /*# sourceMappingURL=style.css.map */

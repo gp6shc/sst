@@ -29,7 +29,7 @@ get_header(); ?>
 		</section>
 	</div>
 	
-	<section class="grid">
+	<section class="grid constrain">
 		<div class="middle grunge">
 			<div class="grid-content contain-50 contain-right">
 				<?= $fields['middle_school']; ?>

@@ -8,8 +8,13 @@ Elements
 body {
 	position: relative;
 	min-width: 320px;
+	background-color: $purple;
 }
 
+.white-bg {
+	background-color: white;
+	overflow: hidden;
+}
 
 hr {
 	background-color: #ccc;
@@ -164,6 +169,18 @@ a {
 	}
 }
 
+.no-hover-line {
+	
+	&::after {
+		display: none;
+	}
+	
+	&:focus::after {
+		display: block;
+		transform: rotateY(0);	
+	}
+}
+
 p {
 	margin: 0;
 	
@@ -191,7 +208,7 @@ Buttons
 	font-weight: 700;
 	text-transform: uppercase;
 	background-color: $purple;	
-	filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+	box-shadow: 2px 2px 1px rgba(black, 0.3);
 	transition: border-color $transSmall;
 	
 	&:visited {
@@ -212,7 +229,7 @@ Buttons
 		transition: border-color $transSmall;
 	}
 	
-	&:hover {
+	&:hover, &:focus {
 		color: white;
 		border-bottom-color: $white;
 		
