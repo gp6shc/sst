@@ -125,6 +125,22 @@
 
 .icn-youtube {
 	background-image: url('img/youtube.svg');
-	background-size: 65%;
+	background-size: 65%;	
+}
+
+.no-svg {
+	.tp_recent_tweets li::before {
+		background-image: url('img/twitter.png');
+		background-size: contain;
+	}
 	
+	.icn-twitter {
+		background-image: url('img/twitter.png');
+	}
+	.icn-facebook {
+		background-image: url('img/facebook.png');
+	}
+	.icn-youtube {
+		background-image: url('img/youtube.png');
+	}
 }
