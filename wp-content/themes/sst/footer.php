@@ -31,6 +31,9 @@
 	</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
+</div> <!-- .whte-bg -->
+<!-- Script Loading -->
+<script src="<?= get_stylesheet_directory_uri(); ?>/js/site.min.js" async></script>
 
 </body>
 </html>
