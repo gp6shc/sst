@@ -4895,6 +4895,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/plugins\/expand_links.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/expand_links.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-content\/plugins\/index.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -4908,9 +4917,31 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 48846,
+		"initialSize": 64762,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/assets\/banner-772x250.png",
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/assets\/banner-772x250.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/plugins\/recent-tweets-widget\/assets\/icon-128x128.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12695,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/assets\/icon-128x128.png",
+		"outputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/assets\/icon-128x128.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/plugins\/recent-tweets-widget\/assets\/icon-256x256.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36443,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/assets\/icon-256x256.png",
+		"outputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/assets\/icon-256x256.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4962,6 +4993,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/recent-tweets.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/plugins\/recent-tweets-widget\/settings.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/recent-tweets-widget\/settings.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
