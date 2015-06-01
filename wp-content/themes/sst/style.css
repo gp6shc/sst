@@ -487,9 +487,6 @@ Posts and pages
 .sticky {
   display: block; }
 
-.hentry {
-  margin: 0 0 1.5em; }
-
 .byline,
 .updated:not(.published) {
   display: none; }
@@ -551,7 +548,8 @@ Elements
 body {
   position: relative;
   min-width: 320px;
-  background-color: #501B73; }
+  background-color: #501B73;
+  z-index: 0; }
 
 .white-bg {
   background-color: white;
@@ -644,7 +642,6 @@ h6 {
 .brush {
   font-family: "BrushUp", sans-serif;
   letter-spacing: 0.125rem;
-  font-size: 3.8em;
   line-height: 1;
   text-rendering: geometricPrecision; }
 
@@ -742,6 +739,23 @@ Buttons
   border-bottom-color: #00A7D0; }
   .btn-blue::after {
     border-top-color: #00A7D0; }
+
+.btn-white {
+  background-color: white;
+  border-bottom-color: white;
+  color: #00A7D0; }
+  .btn-white::after {
+    border-top-color: white; }
+  .btn-white:visited {
+    color: #00A7D0; }
+  .btn-white:hover, .btn-white:focus {
+    color: #00A7D0;
+    border-bottom-color: #00A7D0; }
+    .btn-white:hover::after, .btn-white:focus::after {
+      -webkit-transform: translateY(13px);
+          -ms-transform: translateY(13px);
+              transform: translateY(13px);
+      border-top-color: #00A7D0; }
 
 .btn-double {
   display: inline-block;
@@ -944,7 +958,7 @@ Miscellaneous
 
 .grid {
   padding: 0;
-  height: 1002px;
+  height: 995px;
   text-align: center;
   color: white; }
   .grid > div {
@@ -1088,10 +1102,46 @@ Miscellaneous
     height: 0;
     padding-bottom: 66.667%; } }
 
+.intro {
+  padding: 100px 0 35px 0;
+  color: white;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.125em; }
+  .intro h1 {
+    color: white; }
+
+.info {
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5em; }
+
+.info-block {
+  width: 25%;
+  margin: 0 15px;
+  padding: 1.5em;
+  background: #501B73;
+  text-align: center;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3); }
+  .info-block h2 {
+    padding-bottom: 0.5em; }
+  .info-block p {
+    padding: 0 0.75em; }
+  .info-block .btn {
+    margin-bottom: 1.125em; }
+
 .site-footer {
   background-color: #E4E4E4;
   padding: 50px 0;
-  margin-top: 7px; }
+  margin-top: 14px; }
 
 .footer-wrap {
   display: -webkit-box;

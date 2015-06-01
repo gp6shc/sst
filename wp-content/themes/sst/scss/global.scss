@@ -9,6 +9,7 @@ body {
 	position: relative;
 	min-width: 320px;
 	background-color: $purple;
+	z-index: 0;
 }
 
 .white-bg {
@@ -128,7 +129,6 @@ h6 {
 .brush {
 	font-family: $font-brush;
 	letter-spacing: 0.125rem;
-	font-size: 3.8em;
 	line-height: 1;
 	text-rendering: geometricPrecision;
 }
@@ -246,6 +246,30 @@ Buttons
 	
 	&::after {
 		border-top-color: $blue;
+	}
+}
+
+.btn-white {
+	background-color: white;
+	border-bottom-color: white;
+	color: $blue;
+	
+	&::after {
+		border-top-color: white;
+	}
+	
+	&:visited {
+		color: $blue;
+	}
+	
+	&:hover, &:focus {
+		color: $blue;
+		border-bottom-color: $blue;
+	
+		&::after {
+			transform: translateY(13px);
+			border-top-color: $blue;
+		}
 	}
 }
 

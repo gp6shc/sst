@@ -8,8 +8,7 @@
 get_header(); ?>
 <?php
 	$thumb_id = get_post_thumbnail_id();
-	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-	$thumb_url = $thumb_url_array[0];
+	$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true)[0];
 	
 	$fields = get_fields();
 ?>

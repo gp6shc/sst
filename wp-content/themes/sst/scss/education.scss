@@ -1,0 +1,40 @@
+.intro {
+	padding: 100px 0 35px 0;
+	color: white;
+	width: 40%;
+	margin: auto;
+	text-align: center;
+	font-size: 1.125em;
+	
+	h1 {
+		color: white;
+	}
+}
+
+.info {
+	color: white;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 5em;
+}
+
+.info-block {
+	width: 25%;
+	margin: 0 15px;
+	padding: 1.5em;
+	background: $purple;
+	text-align: center;
+	box-shadow: 4px 4px 0 rgba(black, 0.3);
+	
+	h2 {
+		padding-bottom: 0.5em;
+	}
+	
+	p {
+		padding: 0 0.75em;	
+	}
+	
+	.btn {
+		margin-bottom: 1.125em;
+	}
+}
