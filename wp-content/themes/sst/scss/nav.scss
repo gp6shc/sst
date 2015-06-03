@@ -8,6 +8,10 @@
 	transition: background-color $transLarge;
 }
 
+.page .site-header {
+	background-color: rgba(white, 0.94);
+}
+
 .whiter {
 	background-color: rgba(white, 0.94);
 }
@@ -37,7 +41,8 @@
 }
 
 .order-now {
-	padding: 0.5em;
+	padding: 0.3em 0.5em;
+	margin-top: -0.5em;
 	font-family: $font;
 	font-weight: 400;
 }
@@ -57,7 +62,7 @@
 		opacity: 1;
 	}
 	
-	&.current-menu-item a::after {
+	&.current-menu-item a::after, &.current-page-ancestor a::after {
 		transform: rotateY(0);
 	}
 	
@@ -67,7 +72,7 @@
 		text-transform: uppercase;
 		letter-spacing: -0.85px;
 		font-weight: 400;
-		padding: 2.125em 0.6em calc(2.125em - 8px);
+		padding: 1.5em 0.6em calc(2.15em - 8px);
 		
 		&:hover {
 			color: $purple;

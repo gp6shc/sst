@@ -1,0 +1,86 @@
+.subnav {
+	position: absolute;
+	top: 88px;
+	z-index: 10;
+	height: 48px;
+	width: 100%;
+	background-color: rgba(black, 0.4);
+	
+	.menu-item {
+		text-align: center;
+		
+		a {
+			padding: 0;
+			color: white;
+			line-height: 48px;
+			height: 48px;
+			
+			&::after {
+				height: 4px;
+				margin-top: -4px;
+			}
+		}
+	}
+}
+
+.size-2 {
+	.menu-item {
+		width: 50%;	
+	}
+}
+.size-3 {
+	.menu-item {
+		width: 33.333%;	
+	}
+}
+.size-4 {
+	.menu-item {
+		width: 25%;
+	}
+}
+.size-5 {
+	.menu-item {
+		width: 20%;
+	}
+}
+
+.menu:not(#menu-main) {
+	li:nth-child(1) {
+		background-color: $blue-light;
+		
+		a::after {
+			background-color: $purple-light;
+		}
+	}
+	li:nth-child(2) {
+		background-color: $blue;
+
+		a::after {
+				background-color: $purple;
+		}
+	}
+	li:nth-child(3) {
+		background-color: $purple;
+		
+		a::after {
+				background-color: $blue;
+		}
+	}
+	li:nth-child(4) {
+		background-color: $purple-light;
+		
+		a::after {
+				background-color: $blue-light;
+		}
+	}
+	li:nth-child(5) {
+		background-color: lighten($purple-light, 15%);
+		
+		a::after {
+				background-color: $blue-light;
+		}
+	}
+}
+
+// TO BE REMOVED
+#main{min-height: 100vh;}
