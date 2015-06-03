@@ -53,6 +53,20 @@ function spike_setup() {
 		add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 	}
 	add_action( 'init', 'disable_emojis' );
+	
+	/**
+	 * Filter function used to remove the tinymce emoji plugin.
+	 * 
+	 * @param    array  $plugins  
+	 * @return   array             Difference betwen the two arrays
+	 */
+	function disable_emojis_tinymce( $plugins ) {
+		if ( is_array( $plugins ) ) {
+			return array_diff( $plugins, array( 'wpemoji' ) );
+		} else {
+			return array();
+		}
+	}
 }
 add_action( 'after_setup_theme', 'spike_setup' );
 
@@ -121,7 +135,7 @@ add_shortcode('home-url','home_url_shortcode');
 	    }
 	}
 	add_action('admin_init', 'df_disable_comments_post_types_support');
-	 
+	
 	// Close comments on the front-end
 	function df_disable_comments_status() {
 	    return false;
@@ -164,3 +178,5 @@ add_shortcode('home-url','home_url_shortcode');
 	    }
 	}
 	add_action('init', 'df_disable_comments_admin_bar');
+
+
