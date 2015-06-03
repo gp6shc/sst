@@ -24,7 +24,7 @@ Accessibility
 	transition: all 230ms;
 	
 	&::after {
-		display: none;
+		content: none;
 	}
 }
 

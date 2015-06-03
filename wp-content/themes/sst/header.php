@@ -11,7 +11,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php wp_title( '|', true, 'right' ); bloginfo('name'); ?></title>
 	<script>
 		//Flag the body with "no-svg" class if the browser doesn't support SVG 
 		function hasSVG() {return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");}if ( !hasSVG() ) document.documentElement.className += " no-svg";
