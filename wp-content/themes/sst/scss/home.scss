@@ -95,6 +95,7 @@ $grid-gutter: 14px;
 	
 	> div {
 		margin: 0 1em;
+		padding: 0;
 	}
 }
 
@@ -131,8 +132,11 @@ $grid-gutter: 14px;
 }
 
 .grid-content {
-	padding: 2em 5em;
-	overflow: hidden;
+	padding: 0 5em;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
 	
 	h2 {
 		margin: 0.3em 0 0.5em;
@@ -153,11 +157,11 @@ $grid-gutter: 14px;
 }
 
 .contain-left {
-	float: left;
+	left: 0;
 }
 
 .contain-right {
-	float: right;	
+	right: 0;
 }
 
 // !95% Stat
@@ -165,7 +169,7 @@ $grid-gutter: 14px;
 .ninety-five {
 	font-size: 2.55em;
 	color: $blue;
-	margin-top: 0.1em;
+	margin-top: -0.1em
 }
 
 .stat-small {

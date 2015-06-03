@@ -40,8 +40,8 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="stat change-collage">
-			<div class="contain-25 contain-right brush">
-				<?= $fields['stat']; ?>
+			<div class="grid-content contain-25 contain-right brush">
+				<div class="cf"><?= $fields['stat']; ?></div>
 			</div>
 		</div>
 		<div class="lauren grunge">
