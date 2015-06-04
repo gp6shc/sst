@@ -7,6 +7,15 @@
 	overflow: hidden;
 }
 
+// shorten the height when there's no subnav
+.page-template-default, .page-template-template_middle_high {
+	
+	.page-hero {
+		height: 386px;
+		padding-top: 88px;
+	}
+}
+
 .flex-center {
 	display: flex;
 	justify-content: center;

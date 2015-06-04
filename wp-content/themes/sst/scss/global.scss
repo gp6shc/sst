@@ -134,6 +134,24 @@ h6 {
 	text-rendering: geometricPrecision;
 }
 
+.overline {
+	position: relative;
+	display: inline-block;
+	color: $blue;
+	font-size: 1.5em;
+	padding-top: 20px;
+	margin-bottom: 1.25em;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		background-image: linear-gradient(to right, $blue-light 25%, $blue 25%, $blue 50%, $purple 50%, $purple 75%, $purple-light 75%, $purple-light 100%);
+		height: 5px;
+		width: 100%;
+	}
+}
+
 a {
 	color: $purple;
 	text-decoration: none;
@@ -184,6 +202,7 @@ a {
 
 p {
 	margin: 0;
+	vertical-align: middle;
 	
 	+ p, + .btn, + .btn-double {
 		margin-top: 1.5em;
@@ -356,4 +375,22 @@ Miscellaneous
 	content: '';
 	display: table;
 	clear: both;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+::selection {
+	background-color: rgba($purple, 0.77);
+	color: white;
 }
