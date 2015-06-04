@@ -181,4 +181,4 @@ add_shortcode('home-url','home_url_shortcode');
 	}
 	add_action('init', 'df_disable_comments_admin_bar');
 
-
+?>

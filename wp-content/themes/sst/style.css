@@ -646,6 +646,22 @@ h6 {
   line-height: 1;
   text-rendering: geometricPrecision; }
 
+.overline {
+  position: relative;
+  display: inline-block;
+  color: #00A7D0;
+  font-size: 1.5em;
+  padding-top: 20px;
+  margin-bottom: 1.25em; }
+  .overline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background-image: -webkit-linear-gradient(left, #4CC1DE 25%, #00A7D0 25%, #00A7D0 50%, #501B73 50%, #501B73 75%, #6F5188 75%, #6F5188 100%);
+    background-image: linear-gradient(to right, #4CC1DE 25%, #00A7D0 25%, #00A7D0 50%, #501B73 50%, #501B73 75%, #6F5188 75%, #6F5188 100%);
+    height: 5px;
+    width: 100%; }
+
 a {
   color: #501B73;
   text-decoration: none;
@@ -685,7 +701,8 @@ a {
           transform: rotateY(0); }
 
 p {
-  margin: 0; }
+  margin: 0;
+  vertical-align: middle; }
   p + p, p + .btn, p + .btn-double {
     margin-top: 1.5em; }
 
@@ -834,6 +851,27 @@ Miscellaneous
   content: '';
   display: table;
   clear: both; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+::-moz-selection {
+  background-color: rgba(80, 27, 115, 0.77);
+  color: white; }
+
+::selection {
+  background-color: rgba(80, 27, 115, 0.77);
+  color: white; }
 
 .site-header {
   position: fixed;
@@ -1054,6 +1092,14 @@ Miscellaneous
   top: 334px;
   left: 35%;
   width: calc((50vw - 50%) + 65%); }
+  .lauren > div {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+
+.lauren-contain {
+  height: 320px; }
 
 .about {
   top: 668px;
@@ -1178,6 +1224,10 @@ Miscellaneous
   padding: 136px 0 0 0;
   overflow: hidden; }
 
+.page-template-default .page-hero, .page-template-template_middle_high .page-hero {
+  height: 386px;
+  padding-top: 88px; }
+
 .flex-center {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1199,14 +1249,22 @@ Miscellaneous
   .did-you-know h2 {
     font-size: 2.4em; }
 
+.lauren-image {
+  background: url("img/lauren.png") no-repeat center -25px;
+  width: 309px;
+  height: 100%; }
+
 .entry-header {
   text-align: center;
   margin: 3em 0 2.25em; }
 
 .entry-content {
-  padding: 0 1%;
-  margin: 0 5.8%;
+  padding: 1%;
+  margin: 2.8%;
   font-size: 1.125em; }
+
+.content-area {
+  background-size: cover; }
 
 .intro {
   padding: 100px 0 35px 0;
@@ -1244,6 +1302,71 @@ Miscellaneous
     padding: 0 0.75em; }
   .info-block .btn {
     margin-bottom: 1.125em; }
+
+.grade-intro {
+  font-size: 1.125em;
+  text-align: center;
+  width: 74%;
+  margin: auto; }
+
+.overview-wrapper {
+  font-size: 1rem;
+  margin-top: 3em;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.grade-main {
+  width: 63%; }
+
+.grade-sidebar {
+  width: 30%; }
+
+.overview {
+  margin-bottom: 3em; }
+
+.topic-list {
+  margin-bottom: 3em; }
+  .topic-list ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-position: inside; }
+  .topic-list li + li {
+    border-top: 1px solid #501B73;
+    margin-top: 1em;
+    padding-top: 1em; }
+
+.download {
+  background-color: #501B73;
+  padding: 0.6em 1.2em 1.6em 1.2em;
+  color: white;
+  text-align: center;
+  position: relative; }
+  .download p:first-child-type {
+    text-align: left; }
+  .download .brush {
+    font-size: 3em;
+    margin-bottom: 0.3em; }
+  .download::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    -webkit-transform: translate(2%, 99.7%);
+        -ms-transform: translate(2%, 99.7%);
+            transform: translate(2%, 99.7%);
+    border-top: 30px solid #501B73;
+    border-left: 30px solid transparent; }
 
 .site-footer {
   background-color: #E4E4E4;
