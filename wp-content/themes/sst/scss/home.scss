@@ -103,6 +103,14 @@ $grid-gutter: 14px;
 	top: $grid-height + $grid-gutter;
 	left: 35%;
 	width: calc((50vw - 50%) + 65%);
+	
+	> div {
+		justify-content: flex-start;
+	}
+}
+
+.lauren-contain {
+	height: $grid-height;
 }
 
 .about {

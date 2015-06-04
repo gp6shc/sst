@@ -39,9 +39,7 @@ get_header(); ?>
 			<div class="did-you-know">
 				<?= $fields['did_you_know']; ?>
 			</div>
-			<div class="">
-				<img src="/wp-content/themes/sst/img/lauren.png	"/>
-			</div>
+			<div class="lauren-image"></div>
 		</div>
 		<?php endif; ?>
 	</div>
@@ -55,7 +53,7 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 				
 					<div class="entry-content">
-						<?php the_content(); echo '<pre>';?>
+						<?php the_content();?>
 					</div><!-- .entry-content -->
 					
 					<footer class="entry-footer">

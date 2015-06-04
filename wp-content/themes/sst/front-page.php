@@ -45,8 +45,11 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="lauren grunge">
-			<div class="grid-content contain-75 contain-left cf">
-				<?= $fields['lauren']; ?>
+			<div class="grid-content contain-75 contain-left flex-center">
+				<div class="fifty">
+					<?= $fields['lauren']; ?>
+				</div>
+				<div class="fifty lauren-contain"><div class="lauren-image"></div></div>
 			</div>
 		</div>
 		<div class="about grunge">
