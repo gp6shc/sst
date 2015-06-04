@@ -1,3 +1,9 @@
+// top level education overview page
+
+.content-area {
+	background-size: cover;
+}
+
 .intro {
 	padding: 100px 0 35px 0;
 	color: white;
@@ -37,5 +43,78 @@
 	
 	.btn {
 		margin-bottom: 1.125em;
+	}
+}
+
+// Middle and High pages
+
+.grade-intro {
+	font-size: 1.125em;
+	text-align: center;
+	width: 74%;
+	margin: auto;
+}
+
+.overview-wrapper {
+	font-size: 1rem;
+	margin-top: 3em;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.grade-main {
+	width: 63%;	
+}
+.grade-sidebar {
+	width: 30%;	
+} 
+
+.overview {
+	margin-bottom: 3em;
+}
+.lesson-video {
+
+}
+.topic-list {
+	margin-bottom: 3em;
+	
+	ul {
+		margin-left: 0;
+		padding-left: 0;
+		list-style-position: inside;
+	}
+	
+	li + li {
+		border-top: 1px solid $purple;
+		margin-top: 1em;
+		padding-top: 1em;
+	}
+}
+.download {
+	background-color: $purple;
+	padding: 0.6em 1.2em 1.6em 1.2em;
+	color: white;
+	text-align: center;
+	position: relative;
+	
+	p:first-child-type {
+		text-align: left;
+	}
+	
+	.brush {
+		font-size: 3em;
+		margin-bottom: 0.3em;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		transform: translate(2% ,99.7%);
+		border-top: 30px solid $purple;
+		border-left: 30px solid transparent;
 	}
 }
