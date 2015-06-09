@@ -91,6 +91,15 @@ add_action( 'wp_enqueue_scripts', 'spike_remove_scripts', 20 );
 function footer_widgets_init() {
 
 	register_sidebar( array(
+		'name'          => 'Header Button',
+		'id'            => 'header_btn',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+	
+	register_sidebar( array(
 		'name'          => 'Footer Left',
 		'id'            => 'footer_1',
 		'before_widget' => '',
@@ -116,7 +125,6 @@ function footer_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
-
 }
 add_action( 'widgets_init', 'footer_widgets_init' );
 

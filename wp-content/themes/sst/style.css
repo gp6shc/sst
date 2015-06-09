@@ -703,7 +703,7 @@ a {
 p {
   margin: 0;
   vertical-align: middle; }
-  p + p, p + .btn, p + .btn-double {
+  p + p, p + .btn, p + .btn-double, p + h2 {
     margin-top: 1.5em; }
 
 .text-centered {
