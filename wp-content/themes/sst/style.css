@@ -1222,13 +1222,13 @@ Miscellaneous
   background-image: url("img/grunge.jpg");
   background-size: cover;
   background-position: center center;
-  height: 430px;
-  padding: 136px 0 0 0;
+  height: 386px;
+  padding: 88px 0 0 0;
   overflow: hidden; }
 
-.page-template-default .page-hero, .page-template-template_middle_high .page-hero {
-  height: 386px;
-  padding-top: 88px; }
+.page-template-template_subnav .page-hero {
+  height: 430px;
+  padding-top: 136px; }
 
 .flex-center {
   display: -webkit-box;
@@ -1372,6 +1372,9 @@ Miscellaneous
 
 .faq-wrapper + h2 {
   margin-top: 1em; }
+
+.faq + .faq {
+  border-top: 1px solid #E4E4E4; }
 
 .question {
   background-color: #00A7D0;

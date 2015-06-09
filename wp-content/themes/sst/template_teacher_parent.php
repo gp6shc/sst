@@ -11,9 +11,6 @@ get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 	
 	<?php 
-		// Choose the wp-menu of parent page's name or if no parent of page name
-		$menuToDisplay = $post->post_parent ? strtolower( get_the_title( $post->post_parent )) : $post->post_name;
-		
 		// Get ACF fields
 		$fields = get_fields();
 		
@@ -24,16 +21,7 @@ get_header(); ?>
 		}
 	?>
 	
-	<div class="page-hero" <?php if ( !$fields['did_you_know'] ): ?>style="background-image: url('<?= $thumb_url; ?>')"<?php endif;?>>
-		<div class="subnav">
-			<div class="constrain">
-				<?php
-					$menu = get_term(get_nav_menu_locations()[$menuToDisplay], 'nav_menu');				
-					wp_nav_menu( array( 'theme_location' => $menuToDisplay, 'menu_class' => 'menu size-'.$menu->count ) );
-				?>
-			</div>
-		</div>
-		
+	<div class="page-hero" <?php if ( !$fields['did_you_know'] ): ?>style="background-image: url('<?= $thumb_url; ?>')"<?php endif;?>>		
 		<?php if ( ($fields['did_you_know']) ): ?>
 		<div class="constrain flex-center">
 			<div class="did-you-know">

@@ -2,17 +2,17 @@
 	background-image: url('img/grunge.jpg');
 	background-size: cover;
 	background-position: center center;
-	height: 430px;
-	padding: 136px 0 0 0;
+	height: 386px;
+	padding: 88px 0 0 0;
 	overflow: hidden;
 }
 
 // shorten the height when there's no subnav
-.page-template-default, .page-template-template_middle_high {
+.page-template-template_subnav {
 	
 	.page-hero {
-		height: 386px;
-		padding-top: 88px;
+		height: 430px;
+		padding-top: 136px;
 	}
 }
 

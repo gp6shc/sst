@@ -5,6 +5,10 @@
 	}
 }
 
+.faq + .faq {
+	border-top: 1px solid $white;
+}
+
 .question {
 	background-color: $blue;
 	color: white;
