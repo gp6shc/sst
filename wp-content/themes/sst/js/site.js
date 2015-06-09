@@ -24,3 +24,22 @@ window.addEventListener('scroll', function() {
 
 // kick-off before any scroll
 checkIfShouldSwitch();
+
+
+// FAQs
+
+var faqs = document.getElementsByClassName('faq');
+
+if ( faqs.length ) {
+	for (var i = 0; i < faqs.length; i++) {
+		faqs[i].firstElementChild.addEventListener('click', function() {
+			var otherExpand = document.getElementsByClassName('opened')[0];
+		/// var answer 		= this.parentNode.lastElementChild
+
+			if (otherExpand && otherExpand !== this) {
+				otherExpand.classList.remove('opened');
+			}
+			this.classList.toggle('opened');
+		}, false);
+	}
+}

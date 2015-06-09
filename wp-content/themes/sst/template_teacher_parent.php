@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages.
  *
- * Template Name: FAQs
+ * Template Name: Teacher & Parents
  *
  * @package Spike
  */
@@ -16,10 +16,6 @@ get_header(); ?>
 		
 		// Get ACF fields
 		$fields = get_fields();
-		
-		echo '<pre>';
-		var_dump($fields);
-		echo '</pre>';
 		
 		// if there is no "Did You Know" block, get the featured image url
 		if ( !$fields['did_you_know'] ) {
@@ -58,6 +54,20 @@ get_header(); ?>
 				
 					<div class="entry-content">
 						<?php the_content();?>
+						
+						<h2>FAQs</h2>
+						<div class="faq-wrapper">
+							<?php foreach ($fields['faqs'] as $faq) : ?>
+								<section class="faq">
+									<div class="question">
+										<?= $faq['question']; ?>
+									</div>
+									<div class="answer">
+										<?= $faq['answer']; ?>
+									</div>
+								</section>
+							<?php endforeach; ?>
+						</div>
 					</div><!-- .entry-content -->
 					
 					<footer class="entry-footer">
