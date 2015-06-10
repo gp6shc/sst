@@ -41,6 +41,6 @@
 	background-color: $white;
 	padding: 0 0.75em 0 2em;
 	max-height: 0;
-	transition: max-height $transMedium, padding $transMedium;
+	transition: max-height $transMedium, padding $transSmall;
 	overflow: hidden;
 }
