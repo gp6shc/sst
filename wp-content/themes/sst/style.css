@@ -1416,7 +1416,7 @@ Miscellaneous
 .question {
   background-color: #00A7D0;
   color: white;
-  padding: 0.25em 0.75em 0.25em 2.3em;
+  padding: 0.25em 0.75em 0.25em 2em;
   font-size: 1.125em;
   cursor: pointer;
   position: relative; }
@@ -1437,11 +1437,11 @@ Miscellaneous
             transform: rotateZ(135deg); }
   .question.opened + .answer {
     max-height: 700px;
-    padding: 1.25em 0.75em 1.25em 2em; }
+    padding: 1.25em 0.75em 1.25em 2.3em; }
 
 .answer {
   background-color: #E4E4E4;
-  padding: 0 0.75em 0 2em;
+  padding: 0 0.75em 0 1.8em;
   max-height: 0;
   -webkit-transition: max-height 350ms, padding 240ms;
           transition: max-height 350ms, padding 240ms;
