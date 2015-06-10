@@ -22,7 +22,7 @@ get_header(); ?>
 		}
 	?>
 	
-	<div class="page-hero" <?php if ( !$fields['did_you_know'] ): ?>style="background-image: url('<?= $thumb_url; ?>'), url('<?= $fields['logo']; ?>)"<?php endif;?>>
+	<div class="page-hero" <?php if ( !$fields['did_you_know'] ): ?>style="background-image: url('<?= $fields['logo']; ?>'), url('<?= $thumb_url; ?>')"<?php endif;?>>
 		<?php if ( ($fields['did_you_know']) ): ?>
 		<div class="constrain flex-center">
 			<div class="did-you-know">
