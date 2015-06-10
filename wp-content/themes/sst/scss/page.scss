@@ -8,13 +8,23 @@
 	overflow: hidden;
 }
 
-// shorten the height when there's no subnav
+// subnav pages only
 .page-template-template_subnav {
 	
 	.page-hero {
 		height: 430px;
 		padding-top: 136px;
 	}
+}
+
+// 
+.page-template-template_middle_high {
+	
+	.page-hero {
+		background-size: auto, cover;
+		background-position: center 156px, center center;
+		background-repeat: no-repeat;
+	}	
 }
 
 .flex-center {

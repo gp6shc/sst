@@ -1267,6 +1267,11 @@ Miscellaneous
   height: 430px;
   padding-top: 136px; }
 
+.page-template-template_middle_high .page-hero {
+  background-size: auto, cover;
+  background-position: center 156px, center center;
+  background-repeat: no-repeat; }
+
 .flex-center {
   display: -webkit-box;
   display: -webkit-flex;

@@ -24,7 +24,7 @@ get_header(); ?>
 		}
 	?>
 	
-	<div class="page-hero" <?php if ( !$fields['did_you_know'] ): ?>style="background-image: url('<?= $thumb_url; ?>')"<?php endif;?>>
+	<div class="page-hero" <?php if ( !$fields['did_you_know'] ): ?>style="background-image: url(<?= $thumb_url; ?>)"<?php endif;?>>
 		<div class="subnav">
 			<div class="constrain">
 				<?php
