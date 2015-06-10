@@ -12,17 +12,19 @@
 .question {
 	background-color: $blue;
 	color: white;
-	padding: 0.25em 0.75em 0.25em 1.8em;
-	text-indent: -1.1em;
+	padding: 0.25em 0.75em 0.25em 2em;
 	font-size: 1.125em;
 	cursor: pointer;
+	position: relative;
 	
 	&::before {
 		content: "+";
 		color: mix($blue, $white, 40%);
-		line-height: 1;
-		font-size: 1.25em;
-		text-indent: 0;
+		line-height: 0.6;
+		font-size: 1.5em;
+		position: absolute;
+		top: 0.35em;
+		left: 0.38em;
 		display: inline-block;
 		transition: transform $transMedium;
 	}
