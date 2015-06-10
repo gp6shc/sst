@@ -47,12 +47,8 @@ get_header(); ?>
 						<div class="faq-wrapper">
 							<?php foreach ($fields['faqs'] as $faq) : ?>
 								<section class="faq">
-									<div class="question">
-										<?= $faq['question']; ?>
-									</div>
-									<div class="answer">
-										<?= $faq['answer']; ?>
-									</div>
+									<div class="question"><?= $faq['question']; ?></div>
+									<div class="answer"><?= $faq['answer']; ?></div>
 								</section>
 							<?php endforeach; ?>
 						</div>

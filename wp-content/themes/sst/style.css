@@ -563,7 +563,8 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 1.5em 0;
+  list-style-position: outside; }
 
 ul {
   list-style: disc; }
@@ -703,7 +704,7 @@ a {
 p {
   margin: 0;
   vertical-align: middle; }
-  p + p, p + .btn, p + .btn-double, p + h2 {
+  p + p, p + .btn, p + .btn-double, p + h2, p + ul {
     margin-top: 1.5em; }
 
 .text-centered {
@@ -1282,7 +1283,8 @@ Miscellaneous
 .did-you-know {
   color: white;
   text-align: center;
-  width: 40%; }
+  width: 40%;
+  font-size: 1.3em; }
   .did-you-know h2 {
     font-size: 2.4em; }
 
@@ -1297,7 +1299,7 @@ Miscellaneous
 
 .entry-content {
   padding: 1%;
-  margin: 2.8%;
+  margin: 2.8% 6%;
   font-size: 1.125em; }
 
 .content-area {
@@ -1414,7 +1416,8 @@ Miscellaneous
 .question {
   background-color: #00A7D0;
   color: white;
-  padding: 0.25em 0.75em 0.25em 0.75em;
+  padding: 0.25em 0.75em 0.25em 1.8em;
+  text-indent: -1.1em;
   font-size: 1.125em;
   cursor: pointer; }
   .question::before {
@@ -1422,6 +1425,7 @@ Miscellaneous
     color: #88cbdc;
     line-height: 1;
     font-size: 1.25em;
+    text-indent: 0;
     display: inline-block;
     -webkit-transition: -webkit-transform 350ms;
             transition: transform 350ms; }
