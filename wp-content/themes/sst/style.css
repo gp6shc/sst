@@ -1416,7 +1416,7 @@ Miscellaneous
 .question {
   background-color: #00A7D0;
   color: white;
-  padding: 0.25em 0.75em 0.25em 2em;
+  padding: 0.25em 0.75em 0.25em 2.3em;
   font-size: 1.125em;
   cursor: pointer;
   position: relative; }
@@ -1425,6 +1425,7 @@ Miscellaneous
     color: #88cbdc;
     line-height: 0.6;
     font-size: 1.5em;
+    padding-top: 3px;
     position: absolute;
     top: 0.35em;
     left: 0.38em;
