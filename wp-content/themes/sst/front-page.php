@@ -47,7 +47,7 @@ get_header(); ?>
 						webkitallowfullscreen
 						mozallowfullscreen 
 						allowfullscreen
-						src="https://player.vimeo.com/video/<?= $fields['video-id']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
+						src="https://player.vimeo.com/video/<?= $fields['video_id']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
 					</iframe>
 				</div>
 			</div>
@@ -79,7 +79,7 @@ get_header(); ?>
 						webkitallowfullscreen
 						mozallowfullscreen 
 						allowfullscreen
-						src="https://player.vimeo.com/video/<?= $fields['video-id-2']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
+						src="https://player.vimeo.com/video/<?= $fields['video_id_2']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
 					</iframe>
 				</div>
 			</div>
