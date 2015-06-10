@@ -1,4 +1,5 @@
 // @codekit-prepend "rAF.js";
+// @codekit-prepend "fitText.js";
 
 var ticking = false;
 var header = document.getElementById('js-header');
@@ -42,4 +43,15 @@ if ( faqs.length ) {
 			this.classList.toggle('opened');
 		}, false);
 	}
+}
+
+// Responsive, single line text size
+
+var responsiveText = document.getElementsByClassName('rsp');
+
+if (responsiveText.length ) {
+	for (var i = 0; i < responsiveText.length; i++ ) {
+		window.fitText( responsiveText[i] );
+	}
+	
 }

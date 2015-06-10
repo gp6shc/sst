@@ -8,7 +8,7 @@
 .caption {
 	position: absolute;
 	z-index: 0;
-	width: 560px;
+	width: 600px;
 	padding: 30px 40px 20px;
 	bottom: 70px;
 	right: 25px;
@@ -62,15 +62,18 @@ $grid-gutter: 14px;
 
 .grid {
 	padding: 0;
-	height: $grid-height * 3 + $grid-gutter * 2.5;
+	height: $grid-height * 4 + $grid-gutter * 3.5 + 40px;
 	text-align: center;
 	color: white;
 	
 	> div {
 		height: 320px;
-		max-height: 320px;
 		position: absolute;
 		margin: $grid-gutter / 2;
+	}
+	
+	.order, .about {
+		height: 360px;
 	}
 	
 	.btn {
@@ -90,24 +93,40 @@ $grid-gutter: 14px;
 	width: 50vw;
 }
 
-.stat {
+.video {
 	top: $grid-height + $grid-gutter;
 	right: 65%;
 	width: calc((50vw - 50%) + 35%);
 	
 	> div {
-		margin: 0 1em;
+		max-width: 370px;
+		margin: 0 15px;
 		padding: 0;
+	}
+	
+	.video-wrapper {
+		box-shadow: 0 0 14px 7px $purple;
 	}
 }
 
-.lauren {
+.stat {
 	top: $grid-height + $grid-gutter;
 	left: 35%;
 	width: calc((50vw - 50%) + 65%);
 	
 	> div {
-		justify-content: flex-start;
+		max-width: 700px;
+		padding: 0 1em;
+	}
+}
+
+.lauren {
+	top: $grid-height * 2 + $grid-gutter * 2;
+	right: 35%;
+	width: calc((50vw - 50%) + 65%);
+	
+	> div {
+		justify-content: flex-end;
 	}
 }
 
@@ -115,29 +134,46 @@ $grid-gutter: 14px;
 	height: $grid-height;
 }
 
-.about {
-	top: $grid-height * 2 + $grid-gutter * 2;
-	right: 35%;
-	width: calc((50vw - 50%) + 65%);
-	
-	div {
-		max-width: 800px;
-	}
-}
-
-.order {
+.video-2 {
 	top: $grid-height * 2 + $grid-gutter * 2;
 	left: 65%;
 	width: calc((50vw - 50%) + 35%);
 	
+	> div {
+		max-width: 370px;
+		margin: 0 15px;
+		padding: 0;
+	}
+	
+	.video-wrapper {
+		box-shadow: 0 0 14px 7px $purple;
+	}
+}
+
+.order {
+	top: $grid-height * 3 + $grid-gutter * 3;
+	right: 65%;
+	width: calc((50vw - 50%) + 35%);
+	
 	div {
-		width: 350px;
+		width: 380px;
 		padding: 2em;
 	}
 	
 	h5 {
 		font-size: 3em;
 		margin-bottom: 0.4em;
+	}
+}
+
+.about {
+	top: $grid-height * 3 + $grid-gutter * 3;
+	left: 35%;
+	width: calc((50vw - 50%) + 65%);
+	height: 360px;
+	
+	div {
+		max-width: 800px;
 	}
 }
 
@@ -174,16 +210,16 @@ $grid-gutter: 14px;
 	right: 0;
 }
 
-// !95% Stat
+// ! 18th bday Stat
 
-.ninety-five {
-	font-size: 2.55em;
-	color: $blue;
-	margin-top: -0.1em
+.eighteenth {
+	font-size: 1.75em;
+	color: white;
+	margin-top: -0.1em;
+	line-height: 1;
 }
 
 .stat-small {
-	text-align: justify;
 	font-size: 0.3em;
 	padding: 0 2.6em;
 	line-height: 1.2;
@@ -194,7 +230,7 @@ $grid-gutter: 14px;
 }
 
 .stat-large {
-	color: $blue;
+	color: $blue-light;
 	font-size: 0.6em;
 	
 	span {
@@ -202,8 +238,8 @@ $grid-gutter: 14px;
 	}
 }
 
-.stat-awareness {
-	font-size: 0.65em;
+.stat-birthday {
+	font-size: 1em;
 }
 
 // !About Lauren

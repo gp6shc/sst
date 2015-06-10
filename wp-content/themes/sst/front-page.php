@@ -39,27 +39,59 @@ get_header(); ?>
 				<?= $fields['high_school']; ?>
 			</div>
 		</div>
-		<div class="stat change-collage">
-			<div class="grid-content contain-25 contain-right brush">
-				<div class="cf"><?= $fields['stat']; ?></div>
+		<div class="video change-collage">
+			<div class="grid-content contain-25 contain-right">
+				<div class="video-wrapper">
+					<iframe 
+						frameborder="0"
+						webkitallowfullscreen
+						mozallowfullscreen 
+						allowfullscreen
+						src="https://player.vimeo.com/video/<?= $fields['video-id']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div class="stat grunge">
+			<div class="grid-content contain-75 contain-left brush">
+				<div class="cf">
+				<!--<?= $fields['stat']; ?> -->
+				<div class="stat-large"><span>1</span> in <span>3</span> girls & <span>1</span> in <span>5</span> boys</div>
+				<div class="stat-small">will be sexually abused before their</div>
+				<div class="eighteenth">18th</div>
+				<div class="stat-large stat-birthday">birthday</div>
+				</div>
 			</div>
 		</div>
 		<div class="lauren grunge">
-			<div class="grid-content contain-75 contain-left flex-center">
+			<div class="grid-content contain-75 contain-right flex-center">
 				<div class="fifty">
 					<?= $fields['lauren']; ?>
 				</div>
 				<div class="fifty lauren-contain"><div class="lauren-image"></div></div>
 			</div>
 		</div>
-		<div class="about grunge">
-			<div class="grid-content contain-75 contain-right">
-				<?= $fields['about']; ?>
+		<div class="video-2 change-collage">
+			<div class="grid-content contain-25 contain-left">
+				<div class="video-wrapper">
+					<iframe 
+						frameborder="0"
+						webkitallowfullscreen
+						mozallowfullscreen 
+						allowfullscreen
+						src="https://player.vimeo.com/video/<?= $fields['video-id-2']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
+					</iframe>
+				</div>
 			</div>
 		</div>
 		<div class="order change-collage">
-			<div class="grid-content contain-25 contain-left">
+			<div class="grid-content contain-25 contain-right">
 				<?= $fields['order']; ?>
+			</div>
+		</div>
+		<div class="about grunge">
+			<div class="grid-content contain-75 contain-left">
+				<?= $fields['about']; ?>
 			</div>
 		</div>
 	</section>

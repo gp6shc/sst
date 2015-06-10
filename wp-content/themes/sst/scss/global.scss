@@ -394,3 +394,12 @@ Miscellaneous
 	background-color: rgba($purple, 0.77);
 	color: white;
 }
+
+.change-collage ::selection, .caption ::selection {
+	background-color: rgba($blue, 0.77);
+	color: white;
+}
+
+.rsp {
+	font-size: 1rem;
+}
