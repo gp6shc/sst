@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying pages with a subnav.
  *
  * Template Name: Default with Sub-Nav
  *

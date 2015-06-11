@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying teacher and parent pages.
  *
  * Template Name: Teacher & Parents
  *
@@ -15,19 +15,17 @@ get_header(); ?>
 		$fields = get_fields();
 		
 		// if there is no "Did You Know" block, get the featured image url
-		if ( !$fields['did_you_know'] ) {
-			$thumb_id = get_post_thumbnail_id();
-			$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true)[0];
-		}
+		$thumb_id = get_post_thumbnail_id();
+		$thumb_url = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true)[0];
 	?>
 	
-	<div class="page-hero" <?php if ( !$fields['did_you_know'] ): ?>style="background-image: url('<?= $thumb_url; ?>')"<?php endif;?>>		
+	<div class="page-hero" style="background-image: url('<?= $thumb_url; ?>')">
 		<?php if ( ($fields['did_you_know']) ): ?>
 		<div class="constrain flex-center">
 			<div class="did-you-know">
 				<?= $fields['did_you_know']; ?>
 			</div>
-			<div class="lauren-image"></div>
+			<div class="dyn-icon" style="background-image:url('<?= $fields['icon']; ?>')"></div>
 		</div>
 		<?php endif; ?>
 	</div>
@@ -45,12 +43,14 @@ get_header(); ?>
 						
 						<h2>FAQs</h2>
 						<div class="faq-wrapper">
+						<?php if ( $fields['faqs'] ): ?>
 							<?php foreach ($fields['faqs'] as $faq) : ?>
 								<section class="faq">
 									<div class="question"><?= $faq['question']; ?></div>
 									<div class="answer"><?= $faq['answer']; ?></div>
 								</section>
 							<?php endforeach; ?>
+						<?php endif; ?>
 						</div>
 					</div><!-- .entry-content -->
 					

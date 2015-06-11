@@ -22,7 +22,7 @@
 	
 	.page-hero {
 		background-size: auto, cover;
-		background-position: center 156px, center center;
+		background-position: center center, center top;
 		background-repeat: no-repeat;
 	}	
 }
@@ -37,10 +37,17 @@
 	color: white;
 	text-align: center;
 	width: 40%;
-	font-size: 1.3em;
+	font-size: 1.25em;
+	line-height: 1.6;
 	
 	h2 {
-		font-size: 2.4em;
+		font-size: 2.3em;
+		margin-bottom: 0.5em;
+	}
+	
+	cite a {
+		color: white;
+		font-size: 0.55em;
 	}
 }
 
@@ -48,6 +55,15 @@
 	background: url('img/lauren.png') no-repeat center -25px;
 	width: 309px;
 	height: 100%;
+}
+
+.dyn-icon {
+	background-image: url('img/power-play.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 309px;
+	height: 211px;
+	background-size: contain;
 }
 
 .entry-header {

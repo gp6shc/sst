@@ -1268,7 +1268,7 @@ Miscellaneous
 
 .page-template-template_middle_high .page-hero {
   background-size: auto, cover;
-  background-position: center 156px, center center;
+  background-position: center center, center top;
   background-repeat: no-repeat; }
 
 .flex-center {
@@ -1289,14 +1289,27 @@ Miscellaneous
   color: white;
   text-align: center;
   width: 40%;
-  font-size: 1.3em; }
+  font-size: 1.25em;
+  line-height: 1.6; }
   .did-you-know h2 {
-    font-size: 2.4em; }
+    font-size: 2.3em;
+    margin-bottom: 0.5em; }
+  .did-you-know cite a {
+    color: white;
+    font-size: 0.55em; }
 
 .lauren-image {
   background: url("img/lauren.png") no-repeat center -25px;
   width: 309px;
   height: 100%; }
+
+.dyn-icon {
+  background-image: url("img/power-play.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 309px;
+  height: 211px;
+  background-size: contain; }
 
 .entry-header {
   text-align: center;
