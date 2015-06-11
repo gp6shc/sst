@@ -1,10 +1,10 @@
 .page-hero {
 	background-image: url('img/grunge.jpg');
 	background-size: cover;
-	background-position: center center;
+	background-position: center top;
 	background-repeat: no-repeat;
-	height: 386px;
-	padding: 88px 0 0 0;
+	height: 342px;
+	padding: 0;
 	overflow: hidden;
 }
 
@@ -12,8 +12,7 @@
 .page-template-template_subnav {
 	
 	.page-hero {
-		height: 430px;
-		padding-top: 136px;
+		padding-top: 48px;
 	}
 }
 

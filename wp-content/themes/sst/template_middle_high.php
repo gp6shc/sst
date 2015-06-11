@@ -55,8 +55,8 @@ get_header(); ?>
 								<section class="lesson-video">
 									<h2 class="overline">Lesson 1 Video</h2>
 									<div class="video-wrapper">
+										<!--// Temp. to be removed -->
 										<?php if (is_page(32)): ?>
-											<!--// Temp. to be removed -->
 											<iframe src="https://www.youtube.com/embed/HZe3s49z20E?controls=2&modestbranding=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 										<?php else:?>
 											<iframe 
