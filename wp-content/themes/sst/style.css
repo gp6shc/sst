@@ -883,8 +883,8 @@ Miscellaneous
   background-color: rgba(0, 167, 208, 0.77);
   color: white; }
 
-.rsp {
-  font-size: 1rem; }
+.center-text {
+  text-align: center; }
 
 .site-header {
   position: fixed;
@@ -1099,7 +1099,7 @@ Miscellaneous
   right: 65%;
   width: calc((50vw - 50%) + 35%); }
   .video > div {
-    max-width: 370px;
+    width: 506px;
     margin: 0 15px;
     padding: 0; }
   .video .video-wrapper {
@@ -1131,7 +1131,7 @@ Miscellaneous
   left: 65%;
   width: calc((50vw - 50%) + 35%); }
   .video-2 > div {
-    max-width: 370px;
+    width: 506px;
     margin: 0 15px;
     padding: 0; }
   .video-2 .video-wrapper {
@@ -1319,6 +1319,22 @@ Miscellaneous
   padding: 1%;
   margin: 2.8% 6%;
   font-size: 1.125em; }
+
+.expert img {
+  width: 175px;
+  height: 175px;
+  margin-right: 25px;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  display: inline-block;
+  vertical-align: top; }
+
+.expert > div {
+  display: inline-block;
+  width: calc(100% - 200px); }
+
+.expert + .expert {
+  margin-top: 2em; }
 
 .content-area {
   background-size: cover; }

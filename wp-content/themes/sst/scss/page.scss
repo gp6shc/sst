@@ -76,3 +76,24 @@
 	margin: 2.8% 6%;
 	font-size: 1.125em;
 }
+
+.expert {
+	
+	img {
+		width: 175px;
+		height: 175px;
+		margin-right: 25px;
+		clip-path: circle(50% at 50% 50%);
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	> div {
+		display: inline-block;
+		width: calc(100% - 200px);
+	}
+	
+	+ .expert {
+		margin-top: 2em;
+	}
+}
