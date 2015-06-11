@@ -55,13 +55,18 @@ get_header(); ?>
 								<section class="lesson-video">
 									<h2 class="overline">Lesson 1 Video</h2>
 									<div class="video-wrapper">
-										<iframe 
-											frameborder="0"
-											webkitallowfullscreen
-											mozallowfullscreen 
-											allowfullscreen
-											src="https://player.vimeo.com/video/<?= $fields['video_id']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
-										</iframe>
+										<?php if (is_page(32)): ?>
+											<!--// Temp. to be removed -->
+											<iframe src="https://www.youtube.com/embed/HZe3s49z20E?controls=2&modestbranding=1&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+										<?php else:?>
+											<iframe 
+												frameborder="0"
+												webkitallowfullscreen
+												mozallowfullscreen 
+												allowfullscreen
+												src="https://player.vimeo.com/video/<?= $fields['video_id']; ?>?color=00A7D0&byline=0&portrait=0&badge=0">
+											</iframe>
+										<?php endif;?>
 									</div>
 								</section>
 							</div>
