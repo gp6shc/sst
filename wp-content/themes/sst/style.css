@@ -175,7 +175,8 @@ sup {
   vertical-align: baseline; }
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+  font-size: 0.6em; }
 
 sub {
   bottom: -0.25em; }

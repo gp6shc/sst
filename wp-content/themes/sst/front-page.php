@@ -55,11 +55,7 @@ get_header(); ?>
 		<div class="stat grunge">
 			<div class="grid-content contain-75 contain-left brush">
 				<div class="cf">
-				<!--<?= $fields['stat']; ?> -->
-				<div class="stat-large"><span>1</span> in <span>3</span> girls & <span>1</span> in <span>5</span> boys</div>
-				<div class="stat-small">will be sexually abused before their</div>
-				<div class="eighteenth">18th</div>
-				<div class="stat-large stat-birthday">birthday</div>
+				<?= $fields['stat']; ?>
 				</div>
 			</div>
 		</div>
