@@ -51,7 +51,7 @@ var responsiveText = document.getElementsByClassName('rsp');
 
 if (responsiveText.length ) {
 	for (var i = 0; i < responsiveText.length; i++ ) {
-		window.fitText( responsiveText[i] );
+		window.fitText( responsiveText[i], 1 );
 	}
 	
 }

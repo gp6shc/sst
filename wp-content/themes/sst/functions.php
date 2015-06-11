@@ -81,6 +81,8 @@ add_action( 'after_setup_theme', 'spike_setup' );
 function spike_remove_scripts() {
     wp_dequeue_style( 'tp_twitter_plugin_css' );
     wp_deregister_style( 'tp_twitter_plugin_css' );
+    wp_dequeue_style( 'contact-form-7' );
+    wp_deregister_style( 'contact-form-7' );
 }
 add_action( 'wp_enqueue_scripts', 'spike_remove_scripts', 20 );
 
