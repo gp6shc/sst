@@ -130,11 +130,21 @@ function footer_widgets_init() {
 }
 add_action( 'widgets_init', 'footer_widgets_init' );
 
+// Shortcodes:
+
 // Get the home url for shortcode use
 function home_url_shortcode() {
 	return get_home_url();
 } 
 add_shortcode('home-url','home_url_shortcode');
+
+// Returns current year
+function year_shortcode() {
+  $year = date('Y');
+  return $year;
+}
+add_shortcode('current-year', 'year_shortcode');
+
 
 // Disable support for comments and trackbacks in post types
 	function df_disable_comments_post_types_support() {

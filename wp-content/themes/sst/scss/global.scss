@@ -110,12 +110,14 @@ h3 {
 }
 
 h4 {
+	color: $blue;
 	font-size: 1.7rem;
 	margin: 0.2rem 0;	
 	
 }
 
 h5 {
+	color: $blue;
 	font-size: 1.3rem;
 	margin: 0.1rem 0;
 	
@@ -205,7 +207,7 @@ p {
 	margin: 0;
 	vertical-align: middle;
 	
-	+ p, + .btn, + .btn-double, + h2, + ul {
+	+ p, + .btn, + .btn-double, + h2, + h3, + h4, + h5, + h6, + ul {
 		margin-top: 1.5em;
 		
 	}
@@ -406,4 +408,13 @@ Miscellaneous
 
 .center-text {
 	text-align: center;
+}
+
+a.subtle {
+	color: $purple;
+	font-weight: 400;
+	
+	&:hover, &:focus {
+		color: $purple;
+	}	
 }
