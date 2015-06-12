@@ -35,7 +35,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- .main-navigation -->
 			
-			<a class="btn-double order-now" href="#">Order Now!</a>
+			<?php dynamic_sidebar('header_btn');?>
 		</div>
 	</header><!-- .site-header -->
 
