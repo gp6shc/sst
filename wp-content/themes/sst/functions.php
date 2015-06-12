@@ -40,6 +40,9 @@ function spike_setup() {
 	// Add featured image support to posts and pages
 	add_theme_support( 'post-thumbnails', array( 'page' ) );
 	
+	// Enable shortcodes in widgets
+	add_filter('widget_text', 'do_shortcode');
+	
 	/*
 	 * Disable the emoji's
 	 * Thanks WP 4.2... Stupidest core upgrade ever
