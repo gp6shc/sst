@@ -100,9 +100,11 @@ $grid-gutter: 14px;
 	width: calc((50vw - 50%) + 35%);
 	
 	> div {
-		width: 506px;
-		margin: 0 15px;
+		width: 85%;
+		max-width: 506px;
 		padding: 0;
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 	
 	.video-wrapper {
@@ -141,9 +143,11 @@ $grid-gutter: 14px;
 	width: calc((50vw - 50%) + 35%);
 	
 	> div {
-		width: 506px;
-		margin: 0 15px;
 		padding: 0;
+		width: 85%;
+		max-width: 506px;
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 	
 	.video-wrapper {

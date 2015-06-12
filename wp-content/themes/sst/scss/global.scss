@@ -396,9 +396,12 @@ Miscellaneous
 	color: white;
 }
 
-.change-collage ::selection, .caption ::selection {
-	background-color: rgba($blue, 0.77);
-	color: white;
+.change-collage, .caption, .info-block {
+	
+	::selection {
+		background-color: rgba($blue, 0.77);
+		color: white;
+	}
 }
 
 .center-text {

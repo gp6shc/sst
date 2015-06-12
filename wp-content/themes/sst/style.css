@@ -875,11 +875,11 @@ Miscellaneous
   background-color: rgba(80, 27, 115, 0.77);
   color: white; }
 
-.change-collage ::-moz-selection, .caption ::-moz-selection {
+.change-collage ::-moz-selection, .caption ::-moz-selection, .info-block ::-moz-selection {
   background-color: rgba(0, 167, 208, 0.77);
   color: white; }
 
-.change-collage ::selection, .caption ::selection {
+.change-collage ::selection, .caption ::selection, .info-block ::selection {
   background-color: rgba(0, 167, 208, 0.77);
   color: white; }
 
@@ -1099,9 +1099,13 @@ Miscellaneous
   right: 65%;
   width: calc((50vw - 50%) + 35%); }
   .video > div {
-    width: 506px;
-    margin: 0 15px;
-    padding: 0; }
+    width: 85%;
+    max-width: 506px;
+    padding: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .video .video-wrapper {
     box-shadow: 0 0 14px 7px #501B73; }
 
@@ -1131,9 +1135,13 @@ Miscellaneous
   left: 65%;
   width: calc((50vw - 50%) + 35%); }
   .video-2 > div {
-    width: 506px;
-    margin: 0 15px;
-    padding: 0; }
+    padding: 0;
+    width: 85%;
+    max-width: 506px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .video-2 .video-wrapper {
     box-shadow: 0 0 14px 7px #501B73; }
 
@@ -1440,6 +1448,10 @@ Miscellaneous
             transform: translate(2%, 99.7%);
     border-top: 30px solid #501B73;
     border-left: 30px solid transparent; }
+
+.crossover {
+  margin: 0 auto;
+  margin-top: 4em; }
 
 .faq-wrapper + h2 {
   margin-top: 1em; }
