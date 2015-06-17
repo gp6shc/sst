@@ -7,7 +7,6 @@ var header = document.getElementById('js-header');
 function checkIfShouldSwitch() {
 	if ( (document.documentElement.scrollTop || document.body.scrollTop) < 5) {
 		header.classList.remove('whiter');
-		console.log('< 5');
 	}else{
 		header.classList.add('whiter');
 	}
@@ -35,7 +34,6 @@ if ( faqs.length ) {
 	for (var i = 0; i < faqs.length; i++) {
 		faqs[i].firstElementChild.addEventListener('click', function() {
 			var otherExpand = document.getElementsByClassName('opened')[0];
-		/// var answer 		= this.parentNode.lastElementChild
 
 			if (otherExpand && otherExpand !== this) {
 				otherExpand.classList.remove('opened');
@@ -46,6 +44,7 @@ if ( faqs.length ) {
 }
 
 // Responsive, single line text size
+// depends on fitText.js
 
 var responsiveText = document.getElementsByClassName('rsp');
 
@@ -53,5 +52,17 @@ if (responsiveText.length ) {
 	for (var i = 0; i < responsiveText.length; i++ ) {
 		window.fitText( responsiveText[i], 1 );
 	}
-	
 }
+
+// responsive menu event handling
+
+var menuButton = document.getElementById('js-menu-button');
+var mainMenu = document.getElementById('js-main-menu');
+
+function toggleMenuOpen() {
+	mainMenu.classList.toggle('menu-open');
+	menuButton.classList.toggle('menu-button-open');
+}
+
+menuButton.addEventListener('click', toggleMenuOpen, false);
+//menuButton.addEventListener('touchdown', toggleMenuOpen, false);

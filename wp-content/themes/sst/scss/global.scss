@@ -306,6 +306,7 @@ Buttons
 	font-size: 1.125em;
 	font-weight: 700;
 	text-transform: uppercase;
+	white-space: nowrap;
 	transition: box-shadow $transMedium;
 	
 	&:visited {
@@ -361,8 +362,8 @@ Miscellaneous
 	position: relative;
 	max-width: 1200px;
 	height: 100%;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: $pad;
+	padding-right: $pad;
 	margin: auto;
 }
 

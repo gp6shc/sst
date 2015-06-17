@@ -6,7 +6,7 @@ $font-brush: 'BrushUp', sans-serif;
 // Brand Colors
 $blue: #00A7D0;
 $purple: #501B73;
-$white: #E4E4E4; 	//footer background
+$white: #E4E4E4;		 	// footer background
 
 // Subnav colors 
 $blue-light: #4CC1DE;
@@ -19,3 +19,5 @@ $font-grey: #4D4D4D;
 $transSmall:  240ms;
 $transMedium: 350ms;
 $transLarge:  500ms;
+
+$pad: 25px; 	 		// global edge padding, on .constrain, .main-naviagtion pseudo elems. on mobile menu

@@ -27,15 +27,26 @@
 	<a class="skip-link screen-reader-text btn" href="#content">Skip to content</a>
 	<header class="site-header" id="js-header" role="banner">
 		<div class="nav-wrapper constrain">
+		
+			<div class="menu-button" id="js-menu-button">
+				<div class="top"></div>
+				<div class="mid"></div>
+				<div class="bot"></div>
+			</div>
+			
 			<div class="site-branding">
-				<a class="no-hover-line" href="<?= home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri()?>/img/sst-logo.svg" onerror="this.src='<?php echo get_stylesheet_directory_uri()?>/img/sst-logo.png'; this.onerror=null;" alt="Safer, Smarter Teens" title="Safer, Smarter Teens"/></a>
+				<a class="no-hover-line" href="<?= home_url(); ?>"><img src="<?= get_stylesheet_directory_uri()?>/img/sst-logo.svg" onerror="this.src='<?= get_stylesheet_directory_uri()?>/img/sst-logo.png'; this.onerror=null;" alt="Safer, Smarter Teens" title="Safer, Smarter Teens"/></a>
 			</div>
 	
-			<nav class="main-navigation" role="navigation">
+			<nav class="main-navigation" role="navigation" id="js-main-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- .main-navigation -->
 			
-			<?php dynamic_sidebar('header_btn');?>
+			<?php if ( is_active_sidebar( 'header_btn' ) ) : ?>
+			<div class="order-now-wrapper">
+				<?php dynamic_sidebar('header_btn');?>
+			</div>
+			<?php endif; ?>
 		</div>
 	</header><!-- .site-header -->
 
