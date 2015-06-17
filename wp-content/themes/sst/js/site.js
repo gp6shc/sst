@@ -1,6 +1,7 @@
 // @codekit-prepend "rAF.js";
 // @codekit-prepend "fitText.js";
 
+/*
 var ticking = false;
 var header = document.getElementById('js-header');
 
@@ -24,22 +25,25 @@ window.addEventListener('scroll', function() {
 
 // kick-off before any scroll
 checkIfShouldSwitch();
+*/
 
 
 // FAQs
 
 var faqs = document.getElementsByClassName('faq');
 
+function toggleFAQ() {
+	var otherExpand = document.getElementsByClassName('opened')[0];
+
+	if (otherExpand && otherExpand !== this) {
+		otherExpand.classList.remove('opened');
+	}
+	this.classList.toggle('opened');
+}
+
 if ( faqs.length ) {
 	for (var i = 0; i < faqs.length; i++) {
-		faqs[i].firstElementChild.addEventListener('click', function() {
-			var otherExpand = document.getElementsByClassName('opened')[0];
-
-			if (otherExpand && otherExpand !== this) {
-				otherExpand.classList.remove('opened');
-			}
-			this.classList.toggle('opened');
-		}, false);
+		faqs[i].firstElementChild.addEventListener('click', toggleFAQ, false);
 	}
 }
 
@@ -64,5 +68,10 @@ function toggleMenuOpen() {
 	menuButton.classList.toggle('menu-button-open');
 }
 
+function touchToggleMenuOpen(e) {
+	e.preventDefault(); // prevent click event from occuring
+	toggleMenuOpen();
+}
+
 menuButton.addEventListener('click', toggleMenuOpen, false);
-//menuButton.addEventListener('touchdown', toggleMenuOpen, false);
+menuButton.addEventListener('touchstart', touchToggleMenuOpen, false);
