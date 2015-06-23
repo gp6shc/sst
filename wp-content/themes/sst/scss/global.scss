@@ -230,6 +230,7 @@ Buttons
 	font-size: 1.125em;
 	font-weight: 700;
 	text-transform: uppercase;
+	word-break: break-word;
 	background-color: $purple;	
 	box-shadow: 2px 2px 1px rgba(black, 0.3);
 	transition: border-color $transSmall;
@@ -306,6 +307,7 @@ Buttons
 	font-size: 1.125em;
 	font-weight: 700;
 	text-transform: uppercase;
+	word-break: break-word;
 	white-space: nowrap;
 	transition: box-shadow $transMedium;
 	
@@ -418,4 +420,13 @@ a.subtle {
 	&:hover, &:focus {
 		color: $purple;
 	}	
+}
+
+@media (max-width: 400px) {
+	
+	.constrain {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
 }

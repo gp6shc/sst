@@ -176,8 +176,10 @@ add_shortcode('current-year', 'year_shortcode');
 	add_filter('comments_array', 'df_disable_comments_hide_existing_comments', 10, 2);
 	 
 	// Remove comments page in menu
+	// Also remove posts menu item
 	function df_disable_comments_admin_menu() {
 	    remove_menu_page('edit-comments.php');
+	    remove_menu_page('edit.php');
 	}
 	add_action('admin_menu', 'df_disable_comments_admin_menu');
 	 

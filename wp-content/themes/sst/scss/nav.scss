@@ -121,6 +121,12 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.site-branding {
+		width: 223px;
+	}
+}
+
 @media (max-width: 767px) {
 	.site-header {
 		height: 74px;
@@ -131,7 +137,6 @@
 	}
 	.site-branding {
 		display: block;
-		width: 248px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -241,17 +246,18 @@
 }
 
 @media (max-width: 400px) {
-	.constrain {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+
 	.menu-button {
 		padding: 28px 15px;
 	}
 	.site-branding {
-		width: 60%;
-		
+		width: 60%;		
+	}	
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+	.site-header {
+		position: absolute;
 	}
-	
 }
 

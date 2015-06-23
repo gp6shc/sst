@@ -51,12 +51,6 @@
 	}
 }
 
-.lauren-image {
-	background: url('img/lauren.png') no-repeat center -25px;
-	width: 309px;
-	height: 100%;
-}
-
 .dyn-icon {
 	background-image: url('img/power-play.png');
 	background-repeat: no-repeat;
@@ -101,5 +95,16 @@
 @media (max-width: 767px) {
 	.page-hero {
 		margin-top: 74px;
+	}
+}
+
+@media (max-width: 500px) {
+	.page-hero {
+		height: 190px;
+	}
+	
+	.entry-content {
+		margin: 0;
+		padding: 0;
 	}
 }
