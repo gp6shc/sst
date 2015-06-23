@@ -32,9 +32,9 @@ class tp_widget_recent_tweets extends WP_Widget {
 					$diff = time() - $tp_twitter_plugin_last_cache_time;
 					$crt = $instance['cachetime'] * 3600;
 					
-				 //	yes, it needs update			
-					if($diff >= $crt || empty($tp_twitter_plugin_last_cache_time)){
-/* 					if (true) { // force cache update */
+				 //	yes, it needs update
+					if($diff >= $crt || empty($tp_twitter_plugin_last_cache_time)) {
+					//if (true) { // force cache update
 						
 						if(!require_once('twitteroauth.php')){ 
 							echo '<strong>'.__('Couldn\'t find twitteroauth.php!','tp_tweets').'</strong>' . $after_widget;
@@ -65,7 +65,7 @@ class tp_widget_recent_tweets extends WP_Widget {
 								$tweets_array[$i]['created_at'] = $tweets[$i]->created_at;
 								
 									//clean tweet text
-									$tweet_unlinked_text = preg_replace('/[\x{10000}-\x{10FFFF}]/u', '', $tweets[$i]->text);
+									$tweet_unlinked_text = preg_replace('/[\x{10000}-\x{10FFFF}]/u', '', $tweets[$i]->text);
 									$tweets_array[$i]['text'] = tp_convert_links($tweet_unlinked_text);
 								
 								if(!empty($tweets[$i]->id_str)){
@@ -186,6 +186,9 @@ class tp_widget_recent_tweets extends WP_Widget {
 //convert links to clickable format
 if (!function_exists('tp_convert_links')) {
 	function unshorten_url($url) {
+		if ($url[0] === 'http://t') {
+			return '';
+		}
 		
 		// Stats
 		$link_unshorten_stats = get_option('link_unshorten_stats');
@@ -209,7 +212,6 @@ if (!function_exists('tp_convert_links')) {
 			add_option('link_unshorten_stats', $link_unshorten_stats,'', 'no');
 		}
 		$link_unshorten_stats = json_decode($link_unshorten_stats);
-		
 		
 		// try the first API
 		$response = file_get_contents("http://expandurl.appspot.com/expand?url=".urlencode($url[0]));
@@ -252,7 +254,7 @@ if (!function_exists('tp_convert_links')) {
 		return $response;
 	}
 		
-	function tp_convert_links($status,$targetBlank=true,$linkMaxLen=250){
+	function tp_convert_links($status,$targetBlank=true){
 		// the target
 		$target=$targetBlank ? " target=\"_blank\" " : "";
 
