@@ -224,6 +224,7 @@ Buttons
 	display: inline-block;
 	position: relative;
 	padding: 0.725em 1.25em 0.35em;
+	border: none;
 	border-bottom: 3px solid $purple;
 	color: white;
 	line-height: 1;
@@ -231,9 +232,11 @@ Buttons
 	font-weight: 700;
 	text-transform: uppercase;
 	word-break: break-word;
-	background-color: $purple;	
+	background-color: $purple;
 	box-shadow: 2px 2px 1px rgba(black, 0.3);
 	transition: border-color $transSmall;
+	-webkit-appearance: none;
+			appearance: none;
 	
 	&:visited {
 		color: white;
@@ -297,11 +300,12 @@ Buttons
 	}
 }
 
-.btn-double, .submit-wrapper  {
+.btn-double {
 	display: inline-block;
 	position: relative;
 	padding: 0.425em 1.25em;
-	background-color: $purple;	
+	background-color: $purple;
+	border: none;
 	box-shadow: 2px 2px 0 $blue;
 	color: white;
 	font-size: 1.125em;
@@ -310,6 +314,8 @@ Buttons
 	word-break: break-word;
 	white-space: nowrap;
 	transition: box-shadow $transMedium;
+	-webkit-appearance: none;
+			appearance: none;
 	
 	&:visited {
 		color: white;

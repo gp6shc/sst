@@ -1,7 +1,6 @@
-.wpcf7 {
+.contact-form {
 	max-width: 700px;
 	margin: auto;
-
 	padding: 2em;
 	
 	label {
@@ -11,6 +10,7 @@
 	input, textarea {
 		float: right;
 		max-width: 300px;
+		width: 100%;
 		padding: 0.25em 0.35em;
 		border: none;
 		-webkit-appearance: none;
@@ -22,6 +22,20 @@
 		}
 	}
 	
+	select {
+		float: right;
+		max-width: 300px;
+		width: 100%;
+		background-color: white;
+		border: none;
+		
+		&:focus {
+			border-color: rgba($blue, 0.8);
+			box-shadow: 0 1px 1px rgba(black, 0.075) inset, 0 0 8px rgba($blue, 0.6);
+			outline: 0 none;
+		}		
+	}
+	
 	textarea {
 		height: 150px;
 		font-size: 0.85em;
@@ -29,7 +43,7 @@
 	}
 }
 
-.form-input {
+.field {
 	padding: 0.4em 0.5em;
 	background-color: lighten($white, 3%);
 
@@ -44,43 +58,31 @@
 	}
 }
 
-.form-submit {
+.submit-field {
 	text-align: center;
-	margin-top: 25px;	
 }
 
-.submit-wrapper {
+.parsley-errors-list {
 	padding: 0;
-	
-	input {
-		padding: 0.55em 1.4em 0.45em;
-		float: none;
-		background: none;
-		font-family: $font;
-		font-weight: 400;
-		text-transform: uppercase;
-		
-		&:focus {
-			outline: none;
+	margin: 0;
+	color: $blue;
+	font-style: italic;
+	list-style: none;
+	font-size: 0.9em;
+}
+
+@media (max-width: 475px) {
+	.contact-form {
+		input, select, textarea {
+			max-width: 200px;
 		}
 	}
-	img {
-		display: none;
+}
+
+@media (max-width: 340px) {
+	.contact-form {
+		input, select, textarea {
+			max-width: none;
+		}
 	}
-}
-
-.wpcf7-not-valid-tip {
-	display: block;
-	color: red;
-	font-size: 0.8em;
-	margin-top: -0.7em;
-}
-
-.screen-reader-response {
-	display: none;
-}
-
-.wpcf7-response-output {
-	margin-top: 25px;
-	min-height: 2em;
 }
