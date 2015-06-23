@@ -6,15 +6,76 @@
 
 .footer-wrap {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: -15px;
 	
 	section {
-		width: 30%;
+		width: calc(33.3333% - 30px);
+		min-width: 230px;
+		flex: 1 0 230px;
+		margin: 15px;
 		
 		+ section {
-			margin-left: 3.333%;
 		}
 	}
 }
+
+.ssk-btn {
+	background-color: $blue;
+	display: inline-block;
+	position: relative;
+	width: 170px;
+	text-align: center;
+	color: white;
+	padding: 0.425em 1.25em;
+	background-image: url("img/explore-ssk.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	height: 90px;
+	text-indent: -9999px;
+	margin-top: 40px;
+	border-radius: 4px;
+	box-shadow: -3px 3px rgba(black ,0.1);
+	transition: background $transMedium;
+	
+	&:hover {
+		background-color: #EB008B;
+	}
+	
+	&:visited {
+		color: white;
+	}
+
+	&::after {
+		content: none;
+	}
+}
+
+.ssk-wrap {
+	position: relative;
+	display: inline-block;
+	
+	&::before {
+		content: "";
+		background-image: url('img/buddy.png');
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 40px;
+		left: 0;
+		width: 100%;
+		height: 40px;
+		transition: transform $transMedium cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	}
+	
+	&:hover::before {
+		transform: translateY(-100%);
+	}
+}
+
 
 .widget-title {
 	color: $blue;
@@ -119,9 +180,9 @@
 }
 
 .lk-logo {
-	width: 50%;
+	width: 160px;
 	height: 2.6em;
-	margin: 0 15px 0 -10px;
+	margin: 0 15px 0 -8px;
 	background-image: url('img/lk_logo_grey.svg');
 	background-size: 90%;
 	background-repeat: no-repeat;
@@ -193,4 +254,47 @@
 	.icn-yt {
 		background-image: url('img/youtube.png');
 	}
+}
+
+@media (max-width: 1000px) {
+	.lk-logo {
+		display: block;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 790px) {
+	.footer-wrap {
+		justify-content: space-around;
+		
+		section:last-child {
+		}
+		.lk-logo {
+			width: 206px;
+			padding: 5px;
+			margin: 0 auto 20px;
+		}
+		.out-links {
+			text-align: center;
+		}
+		.icn {
+			padding: 20px;
+			margin: 0 3px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.site-footer {
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-wrap {
+	}
+}
+
+@media (max-width: 494px) {
+
 }
