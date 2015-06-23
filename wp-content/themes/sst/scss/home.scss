@@ -9,7 +9,7 @@
 	position: absolute;
 	z-index: 0;
 	width: 600px;
-	padding: 30px 40px 20px;
+	padding: 20px 40px;
 	bottom: 70px;
 	right: 25px;
 	color: white;
@@ -40,7 +40,7 @@
 		left: 0;
 		width: 0;
 		height: 0;
-		transform: translate(2% ,99.7%);
+		transform: translate(2% ,99%);
 		border-top: 30px solid rgba($purple, 0.75);
 		border-left: 30px solid transparent;
 		filter: brightness(70%) contrast(116%) saturate(122%);
@@ -63,15 +63,10 @@ $grid-gutter: 14px;
 
 .grid {
 	padding: 0;
-	height: $grid-height * 4 + $grid-gutter * 3.5 + 40px;
+	//height: $grid-height * 4 + $grid-gutter * 3.5 + 40px;
 	text-align: center;
 	color: white;
 	
-	> div {
-		height: 320px;
-		position: absolute;
-		margin: $grid-gutter / 2;
-	}
 	
 	.order, .about {
 		height: 360px;
@@ -82,20 +77,30 @@ $grid-gutter: 14px;
 	}
 }
 
+.row {
+	position: relative;
+	min-height: $grid-height;
+	margin: $grid-gutter 0;
+
+	> div {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		margin: $grid-gutter/2;
+	}
+}
+
 .middle {
-	top: 0;
 	right: 50%;
 	width: 50vw;
 }
 
 .high {
-	top: 0;
 	left: 50%;
 	width: 50vw;
 }
 
 .video {
-	top: $grid-height + $grid-gutter;
 	right: 65%;
 	width: calc((50vw - 50%) + 35%);
 	
@@ -113,18 +118,17 @@ $grid-gutter: 14px;
 }
 
 .stat {
-	top: $grid-height + $grid-gutter;
 	left: 35%;
 	width: calc((50vw - 50%) + 65%);
 	
 	> div {
 		max-width: 700px;
 		padding: 0 1em;
+		letter-spacing: 0.5px;
 	}
 }
 
 .lauren {
-	top: $grid-height * 2 + $grid-gutter * 2;
 	right: 35%;
 	width: calc((50vw - 50%) + 65%);
 	
@@ -137,8 +141,13 @@ $grid-gutter: 14px;
 	height: $grid-height;
 }
 
+.lauren-image {
+	background: url('img/lauren.png') no-repeat center -25px;
+	width: 309px;
+	height: 100%;
+}
+
 .video-2 {
-	top: $grid-height * 2 + $grid-gutter * 2;
 	left: 65%;
 	width: calc((50vw - 50%) + 35%);
 	
@@ -156,7 +165,6 @@ $grid-gutter: 14px;
 }
 
 .order {
-	top: $grid-height * 3 + $grid-gutter * 3;
 	right: 65%;
 	width: calc((50vw - 50%) + 35%);
 	
@@ -172,13 +180,24 @@ $grid-gutter: 14px;
 }
 
 .about {
-	top: $grid-height * 3 + $grid-gutter * 3;
 	left: 35%;
 	width: calc((50vw - 50%) + 65%);
 	height: 360px;
 	
 	div {
 		max-width: 800px;
+	}
+	
+	a {
+		color: lighten($purple, 47%);
+		
+		&:hover {
+			color: white;
+		}
+		
+		&:after {
+			background-color: lighten($purple, 47%);	
+		}
 	}
 }
 
@@ -275,10 +294,39 @@ $grid-gutter: 14px;
 	}
 }
 
+.grunge.grunge {
+	transform: translateX(-100%);
+	transition: transform $transLarge cubic-bezier(0.4, 0.01, 0.165, 0.99) 3s;
+}
+
+.change-collage.change-collage {
+	transform: translateX(100%);
+	transition: transform $transLarge cubic-bezier(0.4, 0.01, 0.165, 0.99) 3s;
+}
+
+.isVisible {
+	&.change-collage, &.grunge {
+		transform: translateX(0);
+	}
+}
+
 @keyframes flutterby {
 	0%	 {background-position: 0	 }
 	5%	 {background-position: -115px}
 	100% {background-position: -115px}
+}
+
+@media (min-width: 1400px) {
+	.video > div {
+		transform: translate(0, -50%);
+		left: auto;
+		margin-right: 20px;
+	}
+	.video-2 > div {
+		transform: translate(0, -50%);
+		left: auto;
+		margin-left: 20px;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -293,9 +341,166 @@ $grid-gutter: 14px;
 	}
 }
 
+@media (max-width: 1200px) {
+	.grid {
+		margin: 0 -7px;
+	}
+	
+	.row {
+		display: flex;
+		margin: 0;
+	
+		> div {
+			position: relative;
+			top: auto;
+			left: auto;
+			right: auto;
+			height: auto;
+		}
+	}
+	.grid-content {
+		position: relative;
+		transform: none;
+		top: auto;
+		left: auto;
+		right: auto;
+	}
+	.video > div,
+	.video-2 > div {
+		position: absolute;
+		top: 50%;
+	}
+	.middle div,
+	.high div,
+	.stat > div,
+	.lauren > div,
+	.order div,
+	.about div {
+		width: 100%;
+		padding: 25px;
+	}
+	
+	.stat-small {
+		padding: 0;
+	}
+	.about h2 {
+		font-size: 2em;
+	}
+	.order h5 {
+		font-size: 2.3em;
+	}
+	.lauren-image {
+		margin: -25px 0;
+		height: calc(100% + 50px);
+	}
+	.fifty {
+		max-width: 50%;
+	}
+	.grid .order,
+	.grid .about {
+		height: auto;
+	}
+}
+
 @media (max-width: 1024px) {
 	.hero {
 		height: 0;
-		padding-bottom: 66.667%;		
+		padding-bottom: 66.6667%;
+		
+		.constrain {
+			height: 66.6667vw;
+		}	
+	}
+	.caption {
+		bottom: 50px;
+	}
+}
+
+@media (max-width: 960px) {
+	.lauren-contain {
+		display: none;
+	}
+	.lauren .fifty {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.row  {
+		flex-wrap: wrap;
+		
+		> div {
+			width: 100%;
+			flex: 0 1 calc(100% - 28px);
+			left: auto;
+			transform: none;
+			padding: 25px;
+		}
+	}
+	.middle div, .high div, .stat > div, .lauren > div, .order div, .about div {
+		padding: 0;
+	}
+
+	.video > div, .video-2 > div {
+		position: relative;
+		left: auto;
+		transform: none;
+	}
+	.stat, .about {
+		order: 0;
+	}
+	.video, .order {
+		order: 1;
+	}
+	.change-collage.change-collage {
+		margin-left: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.caption {
+		width: calc(100% - 50px);	
+	}
+}
+
+@media (max-width: 700px) {
+	.caption-wrapper {
+		margin-top: -120px;
+	}
+	.caption {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin: auto;
+		width: 100%;
+	}
+	
+	.welcome {
+		padding: 0;
+		margin: 55px auto 25px;
+		width: 80%;
+		font-size: 0.85em;
+		
+		h1 {
+			font-size: 2.5em;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.welcome {
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.caption {
+		padding: 10px 20px 20px;
+	}
+}
+
+@media (max-width: 350px) {
+	.welcome h1 {
+		font-size: 2.2em; 
 	}
 }
