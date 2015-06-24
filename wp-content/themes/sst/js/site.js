@@ -65,7 +65,7 @@ if ( isHomepage ) {
 	function isScrolledIntoView(el) {
 		var elemTop = rowTops[counter]
 		
-		var isVisible = (elemTop >= 0) && (elemTop <= (document.body.scrollTop + window.innerHeight - 28) );
+		var isVisible = (elemTop >= 0) && (elemTop <= ( (document.body.scrollTop || document.documentElement.scrollTop) + window.innerHeight - 28) );
 		return isVisible;
 	}
 	
