@@ -28,7 +28,7 @@
 	<header class="site-header" id="js-header" role="banner">
 		<div class="nav-wrapper constrain">
 		
-			<div class="menu-button" id="js-menu-button">
+			<div class="menu-button needsclick" id="js-menu-button">
 				<div class="top"></div>
 				<div class="mid"></div>
 				<div class="bot"></div>
