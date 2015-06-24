@@ -565,6 +565,7 @@ hr {
 ul,
 ol {
   margin: 0 0 1.5em 0;
+  padding-left: 1em;
   list-style-position: outside; }
 
 ul {
@@ -577,6 +578,24 @@ li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em; }
+
+.double-column-list {
+  -webkit-columns: 250px 2;
+     -moz-columns: 250px 2;
+          columns: 250px 2;
+  padding: 0; }
+  .double-column-list li {
+    margin-left: 1em;
+    -webkit-column-break-inside: avoid;
+       page-break-inside: avoid;
+            break-inside: avoid; }
+    .double-column-list li + li {
+      margin-top: 0.5em; }
+  .double-column-list a {
+    display: inline;
+    position: static; }
+    .double-column-list a:after {
+      content: none; }
 
 dt {
   font-weight: bold; }
@@ -672,7 +691,6 @@ a {
   -webkit-transition: color 240ms;
           transition: color 240ms;
   display: inline-block;
-  word-break: break-all;
   font-weight: 700;
   position: relative; }
   a::after {
@@ -886,11 +904,11 @@ Miscellaneous
   background-color: rgba(80, 27, 115, 0.77);
   color: white; }
 
-.change-collage ::-moz-selection, .caption ::-moz-selection, .info-block ::-moz-selection {
+.change-collage ::-moz-selection, .caption ::-moz-selection, .info-block ::-moz-selection, .download ::-moz-selection {
   background-color: rgba(0, 167, 208, 0.77);
   color: white; }
 
-.change-collage ::selection, .caption ::selection, .info-block ::selection {
+.change-collage ::selection, .caption ::selection, .info-block ::selection, .download ::selection {
   background-color: rgba(0, 167, 208, 0.77);
   color: white; }
 
@@ -903,7 +921,9 @@ a.subtle {
   a.subtle:hover, a.subtle:focus {
     color: #501B73; }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
+  body {
+    font-size: 85%; }
   .constrain {
     padding-left: 15px;
     padding-right: 15px; } }
@@ -1037,7 +1057,7 @@ a.subtle {
     -webkit-transition: height 400ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
             transition: height 400ms cubic-bezier(0.4, 0.01, 0.165, 0.99); }
     .main-navigation.menu-open {
-      height: 2.375em; }
+      height: 38px; }
     .main-navigation::before {
       content: "";
       display: inline-block;
@@ -1068,7 +1088,7 @@ a.subtle {
     padding-bottom: 5px; }
   .menu-item a {
     font-size: 1rem;
-    padding: 0.2em 0.6em calc(1em - 8px); }
+    padding: 3.2px 9.6px 8px; }
     .menu-item a::after {
       height: 2px;
       margin-top: -3px; }
@@ -1118,6 +1138,10 @@ a.subtle {
     padding: 28px 15px; }
   .site-branding {
     width: 60%; } }
+
+@media (max-width: 375px) {
+  .grade-intro {
+    width: 100%; } }
 
 @media (max-width: 1023px) and (orientation: landscape) {
   .site-header {
@@ -1626,7 +1650,6 @@ a.subtle {
 .page-template-template_subnav .page-hero {
   padding-top: 48px; }
 
-edu pages
 .page-template-template_middle_high .page-hero {
   background-size: auto, cover;
   background-position: center center, center top;
@@ -1692,13 +1715,88 @@ edu pages
 .expert + .expert {
   margin-top: 2em; }
 
+.halves-wrap {
+  margin: 3em 0 2em;
+  position: relative; }
+  .halves-wrap img {
+    width: 45%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .halves-wrap:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.half {
+  width: 50%;
+  float: right; }
+  .half ul {
+    margin: 0; }
+
+@media (max-width: 1024px) {
+  .page-template-template_middle_high .page-hero {
+    background-size: 75%, cover; } }
+
+@media (max-width: 768px) {
+  .page-template-template_middle_high .page-hero {
+    background-size: 85%, cover; }
+  .page-hero .lauren-image {
+    width: 35%;
+    height: 100%;
+    margin: 0;
+    background-size: contain;
+    background-position: bottom center; }
+  .did-you-know h2 {
+    font-size: 1.6em; }
+  .did-you-know p {
+    font-size: 0.9em; } }
+
 @media (max-width: 767px) {
   .page-hero {
-    margin-top: 74px; } }
+    margin-top: 74px; }
+  .halves-wrap img {
+    width: calc(100% + 50px);
+    max-width: none;
+    float: none;
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    margin: 0 -25px 1.5em; }
+  .halves-wrap:after {
+    content: none; }
+  .half {
+    width: 100%;
+    float: none; }
+  /*
+	img {
+		width: calc(100% + 50px);
+		max-width: none;
+		float: none;
+		position: static;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+*/ }
+
+@media (max-width: 600px) {
+  .page-hero .lauren-image {
+    width: 45%; }
+  .did-you-know {
+    widtH: 50%; } }
 
 @media (max-width: 500px) {
   .page-hero {
     height: 190px; }
+    .page-hero .lauren-image {
+      display: none; }
+  .did-you-know {
+    width: 100%; }
   .entry-content {
     margin: 0;
     padding: 0; } }
@@ -1775,10 +1873,12 @@ edu pages
 
 .topic-list {
   margin-bottom: 3em; }
-  .topic-list ul {
+  .topic-list ol {
     margin-left: 0;
     padding-left: 0;
     list-style-position: inside; }
+  .topic-list li {
+    line-height: 1.4; }
   .topic-list li + li {
     border-top: 1px solid #501B73;
     margin-top: 1em;
@@ -1794,6 +1894,7 @@ edu pages
     text-align: left; }
   .download .brush {
     font-size: 3em;
+    color: white;
     margin-bottom: 0.3em; }
   .download::after {
     content: '';
@@ -1809,7 +1910,64 @@ edu pages
     border-left: 30px solid transparent; }
 
 .crossover {
-  margin-top: 4em; }
+  margin-top: 4em;
+  padding-right: 1.7em; }
+  .crossover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    width: 0.4em;
+    height: 0.4em;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    -webkit-transform: translateY(-35%) rotateZ(45deg);
+            transform: translateY(-35%) rotateZ(45deg); }
+
+@media (max-width: 1250px) {
+  .info-block {
+    width: 35%; }
+  .download .brush {
+    font-size: 3.6vw; }
+  .download .btn {
+    font-size: 1.8vw; } }
+
+@media (max-width: 800px) {
+  .intro {
+    width: 65%; }
+  .info-block {
+    width: 50%; } }
+
+@media (max-width: 767px) {
+  .grade-intro {
+    width: 90%; }
+  .grade-main {
+    width: 100%; }
+  .grade-sidebar {
+    width: 100%;
+    margin: 3em 0; }
+  .download .brush {
+    font-size: 2em; }
+  .download .btn {
+    font-size: 1.2em; } }
+
+@media (max-width: 650px) {
+  .intro {
+    width: 80%; }
+  .info {
+    display: block; }
+  .info-block {
+    width: 100%;
+    display: block;
+    margin: 0 0 25px 0; } }
+
+@media (max-width: 375px) {
+  .intro {
+    width: 90%; }
+  .info-block {
+    padding: 1em; }
+    .info-block p {
+      padding: 0; } }
 
 .faq-wrapper + h2 {
   margin-top: 1em; }
@@ -2143,6 +2301,7 @@ edu pages
             justify-content: space-around; }
     .footer-wrap .lk-logo {
       width: 206px;
+      height: 3.4em;
       padding: 5px;
       margin: 0 auto 20px; }
     .footer-wrap .out-links {

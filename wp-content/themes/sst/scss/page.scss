@@ -17,8 +17,7 @@
 	}
 }
 
-// handle double background images on inner 
-edu pages
+// handle double background images on inner edu pages
 .page-template-template_middle_high {
 	
 	.page-hero {
@@ -93,15 +92,127 @@ edu pages
 	}
 }
 
+.halves-wrap {
+	margin: 3em 0 2em;
+	position: relative;
+	
+	img {
+		width: 45%;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.half {
+	width: 50%;
+	float: right;
+	
+	ul {
+		margin: 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	.page-template-template_middle_high {	
+		.page-hero {
+			background-size: 75%, cover;
+		}	
+	}	
+}
+
+@media (max-width: 768px) {
+	.page-template-template_middle_high {	
+		.page-hero {
+			background-size: 85%, cover;
+		}	
+	}	
+	.page-hero {
+		.lauren-image {
+			width: 35%;
+			height: 100%;
+			margin: 0;
+			background-size: contain;
+			background-position: bottom center;
+		}
+	}
+	
+	.did-you-know {
+		h2 {
+			font-size: 1.6em;
+		}
+		p {
+			font-size: 0.9em;
+		}
+	}
+}
+
 @media (max-width: 767px) {
 	.page-hero {
 		margin-top: 74px;
+	}
+	
+	.halves-wrap {
+		img {
+			width: calc(100% + 50px);
+			max-width: none;
+			float: none;
+			position: static;
+			transform: none;
+			margin: 0 -25px 1.5em;
+		}
+		
+		&:after {
+			content: none;
+		}
+	}
+	.half {
+		width: 100%;
+		float: none;
+	}
+	
+/*
+	img {
+		width: calc(100% + 50px);
+		max-width: none;
+		float: none;
+		position: static;
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+*/
+}
+
+@media (max-width: 600px) {
+	.page-hero {
+		.lauren-image {
+			width: 45%;
+		}
+	}
+	.did-you-know {
+		widtH: 50%;
 	}
 }
 
 @media (max-width: 500px) {
 	.page-hero {
 		height: 190px;
+		
+		.lauren-image {
+			display: none;
+		}
+	}
+	
+	.did-you-know {
+		width: 100%;
 	}
 	
 	.entry-content {

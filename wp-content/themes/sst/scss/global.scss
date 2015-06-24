@@ -27,6 +27,7 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 0;
+	padding-left: 1em; 
 	list-style-position: outside;
 }
 
@@ -42,6 +43,29 @@ li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
+}
+
+.double-column-list {
+	columns: 250px 2;
+	padding: 0;
+	
+	li {
+		margin-left: 1em;
+		break-inside: avoid;
+		
+		+ li {
+			margin-top: 0.5em;
+		}
+	}
+	
+	a {
+		display: inline;
+		position: static;
+		
+		&:after {
+			content: none;
+		}
+	}
 }
 
 dt {
@@ -160,7 +184,6 @@ a {
 	text-decoration: none;
 	transition: color $transSmall;
 	display: inline-block;
-	word-break: break-all;
 	font-weight: 700;
 	position: relative;
 	
@@ -407,7 +430,7 @@ Miscellaneous
 	color: white;
 }
 
-.change-collage, .caption, .info-block {
+.change-collage, .caption, .info-block, .download {
 	
 	::selection {
 		background-color: rgba($blue, 0.77);
@@ -428,7 +451,10 @@ a.subtle {
 	}	
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
+	body {
+		font-size: 85%;	
+	}
 	
 	.constrain {
 		padding-left: 15px;

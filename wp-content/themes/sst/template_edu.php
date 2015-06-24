@@ -24,7 +24,7 @@ get_header(); ?>
 				<section class="intro">
 					<?php the_content(); ?>
 				</section>
-				<section class="info">
+				<section class="info constrain">
 					<div class="info-block">
 						<?= $fields['middle_school']; ?>
 					</div>

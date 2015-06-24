@@ -78,10 +78,14 @@
 .topic-list {
 	margin-bottom: 3em;
 	
-	ul {
+	ol {
 		margin-left: 0;
 		padding-left: 0;
 		list-style-position: inside;
+	}
+	
+	li {
+		line-height: 1.4;
 	}
 	
 	li + li {
@@ -103,6 +107,7 @@
 	
 	.brush {
 		font-size: 3em;
+		color: white;
 		margin-bottom: 0.3em;
 	}
 	
@@ -121,4 +126,88 @@
 
 .crossover {
 	margin-top: 4em;
+	padding-right: 1.7em; 
+	
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 1em;
+		width: 0.4em;
+		height: 0.4em;
+		border-top: 2px solid white;
+		border-right: 2px solid white;
+		transform: translateY(-35%) rotateZ(45deg);
+	}
+}
+
+@media (max-width: 1250px) {
+	.info-block {
+		width: 35%;
+	}
+	.download {
+		.brush {
+			font-size: 3.6vw;
+		}
+		.btn {
+			font-size: 1.8vw;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.intro {
+		width: 65%;
+	}
+	.info-block {
+		width: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	.grade-intro {
+		width: 90%;
+	}
+	.grade-main {
+		width: 100%;
+	}
+	.grade-sidebar {
+		width: 100%;
+		margin: 3em 0;
+	}
+	.download {
+		.brush {
+			font-size: 2em;
+		}
+		.btn {
+			font-size: 1.2em;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.intro {
+		width: 80%;
+	}
+	.info {
+		display: block;
+	}
+	.info-block {
+		width: 100%;
+		display: block;
+		margin: 0 0 25px 0;
+	}
+}
+
+@media (max-width: 375px) {
+	.intro {
+		width: 90%;
+	}
+	.info-block {
+		padding: 1em;
+		
+		p {
+			padding: 0;
+		}
+	}
 }

@@ -1,5 +1,5 @@
 // @codekit-prepend "fitText.js";
-// @codekit-prepend "fastclick.js";
+
 
 // FAQs
 
@@ -70,11 +70,11 @@ if ( isHomepage ) {
 	}
 	
 	function checkVisibility() {
-		if (ticking) { return };
+		if (ticking) { return; }
 		
 		if ( counter < counterMax ) {
 			ticking = true;
-			debugger;
+			
 			if ( isScrolledIntoView( rowContainer[counter] ) ) {			
 				rowContainer[counter].classList.add('isVisible');
 				counter++;

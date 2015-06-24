@@ -76,7 +76,7 @@ get_header(); ?>
 									<?= $fields['topic_list']; ?>
 								</section>
 			
-								<section class="">
+								<section class="samples">
 									<h2 class="overline">Sample Lesson</h2>
 									<div class="download">
 										<?= $fields['download']; ?>

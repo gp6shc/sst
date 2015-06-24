@@ -156,7 +156,7 @@
 		transition: height 400ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
 		
 		&.menu-open {
-			height: 2.375em;
+			height: 38px;
 		}
 		
 		&::before {
@@ -193,7 +193,7 @@
 	
 	.menu-item a {
 		font-size: 1rem;
-		padding: 0.2em 0.6em calc(1em - 8px);
+		padding: 3.2px 9.6px 8px;
 		
 		&::after {
 			height: 2px;
@@ -253,6 +253,12 @@
 	.site-branding {
 		width: 60%;		
 	}	
+}
+
+@media (max-width: 375px) {
+	.grade-intro {
+		width: 100%;
+	}
 }
 
 @media (max-width: 1023px) and (orientation: landscape) {
