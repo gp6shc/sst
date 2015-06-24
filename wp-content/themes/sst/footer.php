@@ -35,7 +35,14 @@
 <?php wp_footer(); ?>
 </div> <!-- .whte-bg -->
 <!-- Script Loading -->
-<script src="<?= get_stylesheet_directory_uri(); ?>/js/site.min.js" async></script>
+<script type="text/javascript" src="<?= get_stylesheet_directory_uri(); ?>/js/site.min.js" async></script>
+<script type="text/javascript">
+	if ('addEventListener' in document) {
+		document.addEventListener('DOMContentLoaded', function() {
+		    FastClick.attach(document.body);
+		}, false);
+	}	
+</script> 
 
 </body>
 </html>
