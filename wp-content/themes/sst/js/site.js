@@ -1,32 +1,5 @@
-// @codekit-prepend "rAF.js";
 // @codekit-prepend "fitText.js";
-
-/*
-var ticking = false;
-var header = document.getElementById('js-header');
-
-function checkIfShouldSwitch() {
-	if ( (document.documentElement.scrollTop || document.body.scrollTop) < 5) {
-		header.classList.remove('whiter');
-	}else{
-		header.classList.add('whiter');
-	}
-}
-
-window.addEventListener('scroll', function() {
-	if(ticking === false) {
-		ticking = true;
-		setTimeout( function(){
-			requestAnimationFrame( checkIfShouldSwitch );
-			ticking = false;
-		}, 200);
-	}
-}, false);
-
-// kick-off before any scroll
-checkIfShouldSwitch();
-*/
-
+// @codekit-prepend "fastclick.js";
 
 // FAQs
 
@@ -54,7 +27,7 @@ var responsiveText = document.getElementsByClassName('rsp');
 
 if (responsiveText.length ) {
 	for (var i = 0; i < responsiveText.length; i++ ) {
-		window.fitText( responsiveText[i], 1 );
+		window.fitText( responsiveText[i], 1.1 );
 	}
 }
 
@@ -75,3 +48,60 @@ function touchToggleMenuOpen(e) {
 
 menuButton.addEventListener('click', toggleMenuOpen, false);
 menuButton.addEventListener('touchstart', touchToggleMenuOpen, false);
+
+
+// check if element is visible
+
+var isHomepage = document.getElementsByClassName('home').length; 
+
+if ( isHomepage ) {
+	
+	function rowTopPos(els) {
+		for (var i = 0; i < els.length; i++) {
+			rowTops.push( els[i].offsetTop + els[i].offsetParent.offsetTop );
+		}
+	}
+
+	function isScrolledIntoView(el) {
+		var elemTop = rowTops[counter]
+		
+		var isVisible = (elemTop >= 0) && (elemTop <= (document.body.scrollTop + window.innerHeight - 28) );
+		return isVisible;
+	}
+	
+	function checkVisibility() {
+		if (ticking) { return };
+		
+		if ( counter < counterMax ) {
+			ticking = true;
+			debugger;
+			if ( isScrolledIntoView( rowContainer[counter] ) ) {			
+				rowContainer[counter].classList.add('isVisible');
+				counter++;
+				console.log('ticked');
+				ticking = false;
+			}else{
+				ticking = false;
+			}
+		}else{
+			document.removeEventListener('scroll', checkVisibility);
+		}
+	}
+	
+	var rowContainer = document.getElementsByClassName('row');
+	
+	if ( rowContainer.length ) {
+		
+		var counter 	= 0;
+		var counterMax 	= rowContainer.length;
+		var ticking 	= false;
+		var rowTops 	= [];
+		
+		document.addEventListener('scroll', checkVisibility, false);
+
+		// kick-off 
+		rowTopPos(rowContainer);
+		checkVisibility();
+	}
+
+}
