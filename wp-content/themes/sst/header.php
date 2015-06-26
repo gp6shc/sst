@@ -28,7 +28,7 @@
 	<header class="site-header" id="js-header" role="banner">
 		<div class="nav-wrapper constrain">
 		
-			<div class="menu-button needsclick" id="js-menu-button">
+			<div class="menu-button" id="js-menu-button">
 				<div class="top"></div>
 				<div class="mid"></div>
 				<div class="bot"></div>
@@ -39,7 +39,9 @@
 			</div>
 	
 			<nav class="main-navigation" role="navigation" id="js-main-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<div class="main-nav-wrap">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</div>
 			</nav><!-- .main-navigation -->
 			
 			<?php if ( is_active_sidebar( 'header_btn' ) ) : ?>

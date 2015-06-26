@@ -6642,6 +6642,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/uploads\/2015\/06\/Posters_v5-3-1024x563.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 138952,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3-1024x563.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3-1024x563.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Posters_v5-3-150x150.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9004,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3-150x150.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3-150x150.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Posters_v5-3-300x165.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18481,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3-300x165.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3-300x165.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Posters_v5-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 927525,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Posters_v5-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/uploads\/2015\/06\/power-play-150x150.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -6858,6 +6902,105 @@
 		"initialSize": 48467,
 		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-11-at-5.18.01-PM.png",
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-11-at-5.18.01-PM.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM-150x150.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 43242,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM-150x150.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM-150x150.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM-300x164.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 85645,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM-300x164.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM-300x164.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 497946,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.17.15-AM.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM-150x150.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36951,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM-150x150.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM-150x150.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM-300x142.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 68165,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM-300x142.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM-300x142.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 432187,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.00-AM.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM-150x150.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40144,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM-150x150.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM-150x150.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM-300x147.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 74023,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM-300x147.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM-300x147.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 465900,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM.png",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Screen-Shot-2015-06-19-at-9.18.15-AM.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -7144,6 +7287,50 @@
 		"initialSize": 103256,
 		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/TI-sm.jpg",
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/TI-sm.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-1024x683.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 327632,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-1024x683.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-1024x683.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-150x150.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14109,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-150x150.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-150x150.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-300x200.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33219,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-300x200.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2-300x200.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/VEGA4404-X2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 628607,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/VEGA4404-X2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

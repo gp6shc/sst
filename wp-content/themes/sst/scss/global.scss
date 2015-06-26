@@ -8,12 +8,10 @@ Elements
 body {
 	position: relative;
 	min-width: 320px;
-	background-color: $purple;
 	z-index: 0;
 }
 
 .white-bg {
-	background-color: white;
 	overflow: hidden;
 }
 
@@ -24,18 +22,15 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul,
-ol {
+ul {
 	margin: 0 0 1.5em 0;
 	padding-left: 1em; 
+	list-style: disc;
 	list-style-position: outside;
 }
-
-ul {
-	list-style: disc;
-}
-
 ol {
+	margin: 0 0 1.5em 0;
+	padding-left: 2em; 
 	list-style: decimal;
 }
 
@@ -230,7 +225,7 @@ p {
 	margin: 0;
 	vertical-align: middle;
 	
-	+ p, + .btn, + .btn-double, + h2, + h3, + h4, + h5, + h6, + ul {
+	+ p, + .btn, + .btn-double, + h2, + h3, + h4, + h5, + h6, + ul, + .video-wrapper {
 		margin-top: 1.5em;
 		
 	}
@@ -246,7 +241,7 @@ Buttons
 .btn {
 	display: inline-block;
 	position: relative;
-	padding: 0.725em 1.25em 0.35em;
+	padding: 0.6em 1.25em 0.35em;
 	border: none;
 	border-bottom: 3px solid $purple;
 	color: white;
@@ -412,10 +407,18 @@ Miscellaneous
 	clear: both;
 }
 
+.max-700 {
+	max-width: 700px;
+	margin: auto;
+	margin-top: 1em;
+}
+
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	height: 0;
+	margin: auto;
+	margin-bottom: 1.5em;
 }
 .video-wrapper iframe {
 	position: absolute;
@@ -451,10 +454,13 @@ a.subtle {
 	}	
 }
 
-@media (max-width: 414px) {
+@media (max-width: 650px) {
 	body {
-		font-size: 85%;	
+		font-size: 85%;
 	}
+}
+
+@media (max-width: 414px) {
 	
 	.constrain {
 		padding-left: 15px;

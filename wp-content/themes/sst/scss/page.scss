@@ -56,7 +56,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 309px;
-	height: 211px;
+	height: 170px;
 	background-size: contain;
 }
 
@@ -74,21 +74,29 @@
 .expert {
 	
 	img {
+		display: block;
+		float: left;
 		width: 175px;
-		height: 175px;
+		height: auto;
 		margin-right: 25px;
-		clip-path: circle(50% at 50% 50%);
-		display: inline-block;
+		border-radius: 50%;
 		vertical-align: top;
 	}
 	
 	> div {
-		display: inline-block;
+		display: block;
+		float: left;
 		width: calc(100% - 210px);
 	}
 	
 	+ .expert {
-		margin-top: 2em;
+		margin-top: 2.5em;
+	}
+	
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
 	}
 }
 
@@ -127,6 +135,23 @@
 			background-size: 75%, cover;
 		}	
 	}	
+}
+
+@media (max-width: 930px) {
+	.did-you-know {
+		width: 60%;
+		font-size: 1.1em;
+		margin-right: 5%;
+		
+		cite a {
+			font-size: 0.75em;			
+		}
+	}
+	.dyn-icon {
+		width: 25%;
+		height: 130px;
+		height: 100%;
+	}
 }
 
 @media (max-width: 768px) {
@@ -179,6 +204,15 @@
 		float: none;
 	}
 	
+	.expert {
+		img {
+			width: 25%;
+			margin-right: 5%;
+		}
+		> div {
+			width: 70%;
+		}
+	}
 /*
 	img {
 		width: calc(100% + 50px);
@@ -198,7 +232,10 @@
 		}
 	}
 	.did-you-know {
-		widtH: 50%;
+		width: 50%;
+	}
+	.entry-title {
+		font-size: 2.5rem;
 	}
 }
 
@@ -213,10 +250,40 @@
 	
 	.did-you-know {
 		width: 100%;
+		margin: 0;
+	}
+	.dyn-icon {
+		position: absolute;
+		left: 0;
+		opacity: 0.13;
+		background-size: 60%;
+		background-position: 113% 46%;
+		width: 100%;
 	}
 	
 	.entry-content {
 		margin: 0;
 		padding: 0;
+		margin-bottom: 3em;
+	}
+}
+
+@media (max-width: 400px) {
+	.expert {
+		img {
+			float: none;
+			width: 50%;
+			margin: 0 auto 1em;
+		}
+		> div {
+			width: 100%;
+			float: none;
+		}
+		&::after {
+			content: '';
+		}
+	}
+	.entry-title {
+		font-size: 2.1rem;
 	}
 }
