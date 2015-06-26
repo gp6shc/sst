@@ -35,10 +35,15 @@ if (responsiveText.length ) {
 
 var menuButton = document.getElementById('js-menu-button');
 var mainMenu = document.getElementById('js-main-menu');
+var subnav = document.getElementsByClassName('subnav')[0];
 
 function toggleMenuOpen() {
 	mainMenu.classList.toggle('menu-open');
 	menuButton.classList.toggle('menu-button-open');
+	
+	if (subnav) {
+		subnav.classList.toggle('slide-down');
+	}
 }
 
 function touchToggleMenuOpen(e) {
@@ -50,58 +55,84 @@ menuButton.addEventListener('click', toggleMenuOpen, false);
 menuButton.addEventListener('touchstart', touchToggleMenuOpen, false);
 
 
-// check if element is visible
+// slide in rows on home page on visibility 
 
-var isHomepage = document.getElementsByClassName('home').length; 
-
-if ( isHomepage ) {
+// sorts 2-D array by the index supplied
+function sortNumber(a,b) {
+	return a[0] - b[0];
+}
 	
-	function rowTopPos(els) {
-		for (var i = 0; i < els.length; i++) {
-			rowTops.push( els[i].offsetTop + els[i].offsetParent.offsetTop );
-		}
-	}
-
-	function isScrolledIntoView(el) {
-		var elemTop = rowTops[counter]
-		
-		var isVisible = (elemTop >= 0) && (elemTop <= ( (document.body.scrollTop || document.documentElement.scrollTop) + window.innerHeight - 28) );
-		return isVisible;
+function getGridItemTopPos(elms) {
+	var itemTops = [];
+	for (var i = 0; i < elms.length; i++) {
+		itemTops.push( elms[i].offsetTop + elms[i].offsetParent.offsetTop + elms[i].offsetParent.offsetParent.offsetTop );
 	}
 	
-	function checkVisibility() {
-		if (ticking) { return; }
+	for (var j = 0; j < elms.length; j++) {
+		var pair = [itemTops[j], elms[j] ];
+		gridItemsAndTops.push(pair);
+	}
+	
+	gridItemsAndTops.sort( sortNumber );
+}
+
+function isScrolledIntoView(index) {
+	var elemTop = gridItemsAndTops[index][0];
+	
+	var isVisible = (elemTop >= 0) && (elemTop <= ( (document.body.scrollTop || document.documentElement.scrollTop) + window.innerHeight - 54) );
+	return isVisible;
+}
+
+function checkVisibility() {
+	if (ticking) { return; }
+	
+	if ( counter !== counterMax ) {
+		ticking = true;
 		
-		if ( counter < counterMax ) {
-			ticking = true;
-			
-			if ( isScrolledIntoView( rowContainer[counter] ) ) {			
-				rowContainer[counter].classList.add('isVisible');
-				counter++;
-				console.log('ticked');
-				ticking = false;
-			}else{
-				ticking = false;
-			}
+		if ( isScrolledIntoView(counter) ) {			
+			gridItemsAndTops[counter][1].classList.add('isVisible');
+			counter++;
+			ticking = false;
 		}else{
-			document.removeEventListener('scroll', checkVisibility);
+			ticking = false;
+		}
+	}else{
+		document.removeEventListener('scroll', checkVisibility);
+		window.removeEventListener('resize', getGridItemTopPos);
+		console.log('de-scrolled');
+	}
+}
+
+function initialCheckVisibility() {
+	for (var i = 0; i < gridItemsAndTops.length; i++) {
+		if ( isScrolledIntoView(i) ) {
+			if ( !gridItemsAndTops[i][1].classList.contains('isVisible') ) {
+				gridItemsAndTops[i][1].classList.add('isVisible');
+				counter++;			
+			}
+			if (counter === counterMax) {
+				document.removeEventListener('scroll', checkVisibility);
+				window.removeEventListener('resize', getGridItemTopPos);
+				console.log('de-scrolled');
+				return;
+			}
 		}
 	}
-	
-	var rowContainer = document.getElementsByClassName('row');
-	
-	if ( rowContainer.length ) {
-		
-		var counter 	= 0;
-		var counterMax 	= rowContainer.length;
-		var ticking 	= false;
-		var rowTops 	= [];
-		
-		document.addEventListener('scroll', checkVisibility, false);
+}
 
-		// kick-off 
-		rowTopPos(rowContainer);
-		checkVisibility();
-	}
+var gridItems = document.querySelectorAll('.row > div'); // temp for merging with itemTops into gridItemsAndTops
 
+if ( gridItems.length ) {
+	var counter 			= 0;
+	var counterMax 			= gridItems.length;
+	var ticking				= false;
+	var gridItemsAndTops	= [];
+	
+	document.addEventListener('scroll', checkVisibility, false);
+	window.addEventListener('resize', getGridItemTopPos, false);
+
+	// kick-off 
+	getGridItemTopPos(gridItems);
+	initialCheckVisibility();
+	window.onload = function() { initialCheckVisibility(); };
 }
