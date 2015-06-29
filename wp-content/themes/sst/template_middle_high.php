@@ -79,7 +79,7 @@ get_header(); ?>
 									<?php if (is_page('middle-school')): ?>
 										<a class=" crossover btn btn-blue" href="<?= home_url()?>/education/high-school">High School</a> 
 									<?php else: ?>
-										<a class="crossover btn btn-blue" href="<?= home_url()?>/education/middle-school">Middle School</a>
+										<a class="crossover btn btn-purple" href="<?= home_url()?>/education/middle-school">Middle School</a>
 									<?php endif; ?>
 								</section>
 							</div>

@@ -206,4 +206,36 @@ add_shortcode('current-year', 'year_shortcode');
 	}
 	add_action('init', 'df_disable_comments_admin_bar');
 
+
+// Custom Admin Style
+function admin_css() {
+	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/admin.css' );
+}
+add_action('admin_print_styles', 'admin_css' );
+
+function add_favicon() {
+	echo '<link rel="shortcut icon" href="' . home_url("favicon-admin.ico") . '" />';
+}
+  
+/*
+add_action('login_head', 'add_favicon');
+add_action('admin_head', 'add_favicon');
+*/
+
+// Custom WordPress Login Page
+function login_css() {
+	wp_enqueue_style( 'login_css', get_template_directory_uri() . '/login.css' );
+	
+	// fix login logo link
+	function loginpage_custom_link() {
+		return home_url();
+	}
+	add_filter('login_headerurl','loginpage_custom_link');
+	
+	function change_title_on_logo() {
+		return 'Return to SaferSmarterTeens.org';
+	}
+	add_filter('login_headertitle', 'change_title_on_logo');
+}
+add_action('login_head', 'login_css');
 ?>
