@@ -18,6 +18,34 @@
 	</script>
 
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri()?>/style.css" type="text/css" media="all">
+	
+	<noscript>
+		<style>
+			.row > div:first-child {
+				transform: none;
+			}
+				
+			.row > div:last-child {
+				transform: none;
+			}
+			.row > div .grid-content {
+				opacity: 1;
+			}
+			.answer {
+				max-height: 700px;
+				padding: 1.25em 0.75em 1.25em 2.3em;
+			}
+			@media (max-width: 767px) {
+				.row > .grunge.grunge {
+					transform: none;
+				}
+				
+				.row > .change-collage.change-collage {
+					transform: none;
+				}
+			}
+		</style>
+	</noscript>
 
 	<?php wp_head(); ?>
 </head>

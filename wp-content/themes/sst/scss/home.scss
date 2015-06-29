@@ -127,6 +127,9 @@ $grid-gutter: 14px;
 		padding: 0 1em;
 		letter-spacing: 0.5px;
 	}
+	h2.brush {
+		font-size: 1em;
+	}
 }
 
 .lauren {
@@ -442,6 +445,9 @@ $grid-gutter: 14px;
 }
 
 @media (max-width: 767px) {
+	.caption {
+		width: calc(100% - 50px);	
+	}
 	.row  {
 		flex-wrap: wrap;
 		
@@ -482,12 +488,6 @@ $grid-gutter: 14px;
 			transform: translateX(100%);
 			transition: transform $transLarge cubic-bezier(0.4, 0.01, 0.165, 0.99);
 		}
-	}
-}
-
-@media (max-width: 767px) {
-	.caption {
-		width: calc(100% - 50px);	
 	}
 }
 
