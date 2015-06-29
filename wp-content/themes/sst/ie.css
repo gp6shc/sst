@@ -1,0 +1,110 @@
+.row > div:first-child {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none; }
+
+.row > div:last-child {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none; }
+
+.row > div .grid-content {
+  opacity: 1; }
+
+.answer {
+  max-height: 700px;
+  padding: 1.25em 0.75em 1.25em 2.3em; }
+
+@media (max-width: 767px) {
+  .row > .grunge.grunge {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
+
+  .row > .change-collage.change-collage {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; } }
+.footer-wrap section {
+  display: block;
+  float: left; }
+.footer-wrap:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.twitter_time::after, .twitter_time:visited::after {
+  opacity: 0; }
+.twitter_time:hover::after, .twitter_time:visited:hover::after {
+  opacity: 1; }
+
+.icn-fb {
+  background-size: 60%; }
+
+.nav-wrapper .site-branding {
+  float: left; }
+.nav-wrapper .main-navigation {
+  float: left; }
+.nav-wrapper .order-now-wrapper {
+  float: right;
+  margin-top: 20px; }
+.nav-wrapper .menu {
+  width: auto;
+  overflow: visible; }
+
+.menu-item.current-menu-item a::after, .menu-item.current-page-ancestor a::after {
+  opacity: 1; }
+.menu-item a::after {
+  opacity: 0; }
+.menu-item a:hover::after, .menu-item a:focus::after {
+  opacity: 1; }
+
+.subnav .menu {
+  overflow: hidden; }
+
+.info {
+  text-align: center; }
+
+.info-block {
+  display: inline-block; }
+
+.overview-wrapper::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.grade-main {
+  float: left; }
+
+.grade-sidebar {
+  float: right; }
+
+.crossover {
+  padding: 0.6em 1.25em 0.35em; }
+  .crossover::before {
+    content: none; }
+
+.flex-center {
+  text-align: center;
+  margin-top: 20px; }
+
+.did-you-know {
+  display: inline-block;
+  position: static;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none; }
+
+.dyn-icon {
+  display: inline-block; }
+
+.lauren-image {
+  display: inline-block;
+  height: 70%; }
+
+@media (max-width: 1200px) {
+  .row > div {
+    width: 100%; }
+
+  .lauren, .video, .video-2 {
+    min-height: 320px; } }

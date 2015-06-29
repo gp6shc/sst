@@ -46,6 +46,10 @@
 			}
 		</style>
 	</noscript>
+	
+	<!--[if IE]>
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri()?>/ie.css" type="text/css" media="all">
+	<![endif]-->
 
 	<?php wp_head(); ?>
 </head>
@@ -70,7 +74,7 @@
 				<div class="main-nav-wrap">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</div>
-			</nav><!-- .main-navigation -->
+			</nav>
 			
 			<?php if ( is_active_sidebar( 'header_btn' ) ) : ?>
 			<div class="order-now-wrapper">
@@ -78,6 +82,6 @@
 			</div>
 			<?php endif; ?>
 		</div>
-	</header><!-- .site-header -->
+	</header>
 
 	<div id="content" class="site-content">
