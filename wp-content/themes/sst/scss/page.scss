@@ -164,6 +164,14 @@
 	ul {
 		margin: 0.7em 0 0;
 	}
+	
+	a {
+		color: $blue;
+		
+		&::after {
+			color: white;
+		}
+	}
 }
 
 @media (max-width: 1024px) {
