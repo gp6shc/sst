@@ -166,10 +166,10 @@
 	}
 	
 	a {
-		color: $blue;
+		color: white;
 		
 		&::after {
-			color: white;
+			background-color: white;
 		}
 	}
 }
