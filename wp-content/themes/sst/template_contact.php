@@ -24,10 +24,14 @@ get_header(); ?>
 					<header class="entry-header">
 						<h1 class="entry-title brush"><?php the_title(); ?></h1>
 					</header><!-- .entry-header -->
-				
-					<div class="entry-content">
-						<?php the_content();?>
-					</div><!-- .entry-content -->
+					
+					<?php
+						$cc = get_the_content();
+						if($cc != '') :?>
+						<div class="entry-content">
+							<?= $cc?>
+						</div>
+					<?php endif; ?>
 
 					<form class="contact-form" action="http://laurens-kids.force.com/website/contact_us" method="post" data-parsley-validate>
 						<input type="hidden" name="thankYouURL" value="//safersmarterteens.org"/>
