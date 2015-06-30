@@ -11,14 +11,21 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="lauren's kids,sexual abuse prevention curriculum, laurens kids, sexual, abuse, teen, curriculum, middleschool, highschool, prevention, child sexual abuse, lauren book">
+	<meta name="description" content="Tap into your personal power and be an advocate for change in your community! This program empowers students to use their voices to better protect themselves and others. Everyone has the right to be safe and speak up when they feel uncomfortable.">
+	<meta property="og:title" content="<?php the_title(); ?>">
+	<meta property="og:url" content="<?php the_permalink(); ?>">
+	<meta name="theme-color" content="#501B73">
+	
 	<title><?php wp_title( '|', true, 'right' ); bloginfo('name'); ?></title>
-	<script>
+	<script type="text/javascript" async="async">
 		//Flag the body with "no-svg" class if the browser doesn't support SVG 
 		function hasSVG() {return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");}if ( !hasSVG() ) document.documentElement.className += " no-svg";
 	</script>
 
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri()?>/style.css" type="text/css" media="all">
-	
+	<link rel="stylesheet" href="<?= get_stylesheet_directory_uri()?>/style.css" type="text/css" media="all">
+	<link rel="shortcut icon" href="<?= home_url("favicon.ico")?>"/>	
+
 	<noscript>
 		<style>
 			.row > div:first-child {
