@@ -149,23 +149,14 @@
 		border-left: 30px solid transparent;
 	}
 	
-	&.right {
+	&.blue {
 		background-color: $blue;
-		float: right;
 		
 		&::after {
 			border-top-color: $blue;
 		}
 	}
-	
-	&.light {
-		background-color: $purple-light;
-		
-		&::after {
-			border-top-color: $purple-light;
-		}
-	}
-	
+
 	.brush {
 		font-size: 1.3em;
 	}
