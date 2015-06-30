@@ -19,11 +19,11 @@
 	
 	<title><?php wp_title( '|', true, 'right' ); bloginfo('name'); ?></title>
 	<script type="text/javascript" async="async">
-		//Flag the body with "no-svg" class if the browser doesn't support SVG 
 		function hasSVG() {return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");}if ( !hasSVG() ) document.documentElement.className += " no-svg";
 	</script>
 
 	<link rel="stylesheet" href="<?= get_stylesheet_directory_uri()?>/style.css" type="text/css" media="all">
+	<link rel="icon" sizes="any" mask href="sst_icon.svg">
 	<link rel="shortcut icon" href="<?= home_url("favicon.ico")?>"/>	
 
 	<noscript>
