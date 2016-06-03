@@ -238,4 +238,55 @@ function login_css() {
 	add_filter('login_headertitle', 'change_title_on_logo');
 }
 add_action('login_head', 'login_css');
+
+
+/* Add a widget to the dashboard.*/
+function add_dashboard_widget_modal() {
+	wp_add_dashboard_widget(
+		'parents_modal',        // Widget slug.
+		'Parents Modal',        // Title.
+		'display_modal_form' 		// Display function.
+	);	
+}
+add_action( 'wp_dashboard_setup', 'add_dashboard_widget_modal' );
+
+/**
+ * Create the function to output the contents of our Dashboard Widget.
+ */
+function display_modal_form() {
+	if (isset($_POST['modal_status'])) {
+		$modal_status = $_POST['modal_status'];
+		update_option( 'parent_modal', $modal_status, false );
+	}else{
+		$modal_status = get_option("parent_modal");
+		
+		if ($modal_status == FALSE) {
+			add_option( 'parent_modal', 0, false );
+			$modal_status = 0;
+		}
+	}
+	echo '<p style="display:none">Modal Option Status: "' . $modal_status . '</p>';
+	
+	$output =	'<div class="wrap">';
+  $output .=			'<form method="post" action="/wp-admin/index.php">';
+  $output .=				'<p>Show SaferSmarterFamilies modal when "Parents" links are clicked</p>';
+  if ( $modal_status == 1 ) {
+	  // modal is showing, th
+		$output .=				'<p><code>Modal is currently being shown to visitors</code></p>';
+		$output .=				'<p>Show modal: 
+												<input type="hidden" name="modal_status" value="0"/>
+												<input type="checkbox" name="modal_status" checked="checked" value="1"/></p>';
+	} else {
+		$output .=				'<p><code>Modal is currently <b>NOT</b> being shown to visitors</code><br/></p>';
+		$output .=				'<p>Show modal: 
+												<input type="hidden" name="modal_status" value="0"/>
+												<input type="checkbox" name="modal_status" value="1"/></p>';	
+	}
+	$output .=				'<p><input type="submit" name="Submit" value="Update" class="button button-primary button-large"/></p>';
+	$output .=			'</form>';
+	$output .=		'</div>';
+	
+  echo $output;
+}
+
 ?>

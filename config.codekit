@@ -5252,16 +5252,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/wp-content\/themes\/sst\/img\/facebook.png": {
+	"\/wp-content\/themes\/sst\/img\/fb.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2156,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/facebook.png",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/facebook.png",
+		"initialSize": 939,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/fb.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/fb.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/themes\/sst\/img\/grunge.jpg": {
 		"fileType": 16384,
@@ -5307,27 +5307,27 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/wp-content\/themes\/sst\/img\/twitter.png": {
+	"\/wp-content\/themes\/sst\/img\/tw.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 7870,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/twitter.png",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/twitter.png",
+		"initialSize": 3573,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/tw.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/tw.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
-	"\/wp-content\/themes\/sst\/img\/youtube.png": {
+	"\/wp-content\/themes\/sst\/img\/yt.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 34695,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/youtube.png",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/youtube.png",
+		"initialSize": 2215,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/yt.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/sst\/img\/yt.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/themes\/sst\/index.php": {
 		"fileType": 8192,
@@ -12802,7 +12802,7 @@
 	"bowerAbbreviatedPath": "",
 	"displayValue": "sst",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "harddrive_orange"
+	"iconImageName": "\/wp-content\/themes\/sst\/img\/sst-logo.png"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 1,
@@ -12947,7 +12947,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/localhost\/sst",
+	"externalServerAddress": "http:\/\/gapalliance.local",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,

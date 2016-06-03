@@ -4,18 +4,10 @@
 	width: 100%;
 	min-width: 320px;
 	height: 88px;
-	background-color: rgba(white, 0.6);
+	background-color: rgba(white, 0.94);
 	box-shadow: 0 5px 5px -2px rgba(0,0,0,0.1);
 	border-radius: 1px; // forces box-shadow to render on iOS
 	transition: background-color $transLarge;
-}
-
-.page .site-header {
-	background-color: rgba(white, 0.94);
-}
-
-.whiter {
-	background-color: rgba(white, 0.94);
 }
 
 .nav-wrapper {

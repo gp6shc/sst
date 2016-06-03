@@ -16,7 +16,7 @@ get_header(); ?>
 				
 					<div class="entry-content center-text">
 						<p>Woah, this page doesn't exist.</p>
-						<a href="<?php home_url()?>" class="btn">Return Home</a>
+						<a href="<?= home_url()?>" class="btn">Return Home</a>
 					</div><!-- .entry-content -->
 					
 					<footer class="entry-footer">
